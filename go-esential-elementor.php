@@ -18,9 +18,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function goee_register_widget( $widgets_manager ) {
 
-    require_once( __DIR__ . '/widgets/card-widget.php' );  // include the widget file
+    // include the widget file
+    require_once( __DIR__ . '/widgets/GOEE_Testimonial_Addon.php' );  
+    require_once( __DIR__ . '/classes/Helper.php' );  
 
-    $widgets_manager->register( new \GOEE_Card_Widget() );  // register the widget
+
+    // register the widget
+    $widgets_manager->register( new GOEE_Testimonial_Addon() );
 
 }
 add_action( 'elementor/widgets/register', 'goee_register_widget' );
