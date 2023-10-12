@@ -70,16 +70,19 @@ function goee_register_widget($widgets_manager)
     // include the widget file
     require_once(__DIR__ . '/widgets/GOEE_Testimonial_Addon.php');
     require_once(__DIR__ . '/widgets/GOEE_Accordion.php');
-    // require_once(__DIR__ . '/widgets/GOEE_Countdown.php');
-    // require_once(__DIR__ . '/widgets/GOEE_Pricing.php');
+    require_once(__DIR__ . '/widgets/GOEE_Pricing_Table.php');
+    require_once(__DIR__ . '/classes/Helper.php');
+    
     // require_once(__DIR__ . '/widgets/GOEE_Image_Carousel.php');
     // require_once(__DIR__ . '/widgets/GOEE_Icon_Box.php');
     // require_once(__DIR__ . '/widgets/GOEE_Progress_Bar.php');
-    require_once(__DIR__ . '/classes/Helper.php');
+    // require_once(__DIR__ . '/widgets/GOEE_Countdown.php');
+    // $widgets_manager->register(new GOEE_Countdown());
 
     // register the widget
     $widgets_manager->register(new GOEE_Testimonial_Addon());
     $widgets_manager->register(new GOEE_Accordion());
+    $widgets_manager->register(new GOEE_Pricing_Table());
 
 }
 add_action('elementor/widgets/register', 'goee_register_widget');
