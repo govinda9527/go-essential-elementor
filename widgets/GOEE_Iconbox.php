@@ -30,7 +30,7 @@ class GOEE_Iconbox extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'basic' ];
+		return [ 'goee-category' ];
 	}
 
 	public function get_keywords() {

@@ -23,7 +23,7 @@ class GOEE_Progressbar extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'basic' ];
+		return [ 'goee-category' ];
 	}
 
 	public function get_script_depends() {

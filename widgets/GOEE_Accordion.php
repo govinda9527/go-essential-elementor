@@ -46,7 +46,7 @@ class GOEE_Accordion extends Widget_Base
 
 	public function get_categories()
 	{
-		return ['basic'];
+		return ['goee-category'];
 	}
 
 	protected function register_controls()

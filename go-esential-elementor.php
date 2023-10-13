@@ -68,12 +68,12 @@ function goee_register_widget($widgets_manager)
 {
 
     // include the widget file
-    require_once(__DIR__ . '/widgets/GOEE_Testimonial_Addon.php');
-    require_once(__DIR__ . '/widgets/GOEE_Accordion.php');
-    require_once(__DIR__ . '/widgets/GOEE_Pricing_Table.php');
-    require_once(__DIR__ . '/classes/Helper.php');
-    require_once(__DIR__ . '/widgets/GOEE_Progressbar.php');
-    require_once(__DIR__ . '/widgets/GOEE_Iconbox.php');
+    require_once( GOEE_PATH . '/classes/Helper.php' );
+    require_once( GOEE_PATH . '/widgets/GOEE_Testimonial_Addon.php' );
+    require_once( GOEE_PATH . '/widgets/GOEE_Accordion.php' );
+    require_once( GOEE_PATH . '/widgets/GOEE_Pricing_Table.php' );
+    require_once( GOEE_PATH . '/widgets/GOEE_Progressbar.php' );
+    require_once( GOEE_PATH . '/widgets/GOEE_Iconbox.php' );
 
     // require_once(__DIR__ . '/widgets/GOEE_Image_Carousel.php');
     // require_once(__DIR__ . '/widgets/GOEE_Countdown.php');
@@ -87,6 +87,19 @@ function goee_register_widget($widgets_manager)
     $widgets_manager->register(new GOEE_Iconbox());
 }
 add_action('elementor/widgets/register', 'goee_register_widget');
+
+function goee_add_elementor_widget_categories( $elements_manager ) {
+
+	$elements_manager->add_category(
+		'goee-category',
+		[
+			'title' => esc_html__( 'GOEE Category', 'go-essential-elementor' ),
+			'icon' => 'fa fa-plug',
+		]
+	);
+
+}
+add_action( 'elementor/elements/categories_registered', 'goee_add_elementor_widget_categories' );
 
 function goee_frontend_stylesheets() {
 
