@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Go Essential Elementor
  * Description: Elementor custom widgets from Eessential Web Apps.
@@ -61,7 +62,6 @@ function goee_initiate_plugin()
         add_action('admin_notices', 'goee_admin_notice_minimum_php_version');
         return;
     }
-
 }
 add_action('plugins_loaded', 'goee_initiate_plugin');
 function goee_register_widget($widgets_manager)
@@ -73,9 +73,9 @@ function goee_register_widget($widgets_manager)
     require_once(__DIR__ . '/widgets/GOEE_Pricing_Table.php');
     require_once(__DIR__ . '/classes/Helper.php');
     require_once(__DIR__ . '/widgets/GOEE_Progressbar.php');
-    
+    require_once(__DIR__ . '/widgets/GOEE_Iconbox.php');
+
     // require_once(__DIR__ . '/widgets/GOEE_Image_Carousel.php');
-    // require_once(__DIR__ . '/widgets/GOEE_Icon_Box.php');
     // require_once(__DIR__ . '/widgets/GOEE_Countdown.php');
     // $widgets_manager->register(new GOEE_Countdown());
 
@@ -84,9 +84,27 @@ function goee_register_widget($widgets_manager)
     $widgets_manager->register(new GOEE_Accordion());
     $widgets_manager->register(new GOEE_Pricing_Table());
     $widgets_manager->register(new GOEE_Progressbar());
-
+    $widgets_manager->register(new GOEE_Iconbox());
 }
 add_action('elementor/widgets/register', 'goee_register_widget');
+
+function goee_frontend_stylesheets() {
+
+	wp_register_style( 'goee-style-1', GOEE_ASSETS_URL.'css/goee-style.css' );
+
+	wp_enqueue_style( 'goee-style-1' );
+
+}
+add_action( 'elementor/frontend/after_enqueue_styles', 'goee_frontend_stylesheets' );
+
+function goee_frontend_scripts() {
+
+	wp_register_script( 'goee-script-1', GOEE_ASSETS_URL.'js/goee-script.js', array(), false, true );
+
+	wp_enqueue_script( 'goee-script-1' );
+}
+add_action( 'elementor/frontend/after_register_scripts', 'goee_frontend_scripts' );
+
 
 /**
  * Admin notice
@@ -107,7 +125,6 @@ function goee_admin_notice_missing_elementor()
     );
 
     printf('<div class="notice notice-warning is-dismissible"><p style="padding: 5px 0">%1$s</p></div>', $message);
-
 }
 
 /**
@@ -134,7 +151,6 @@ function goee_admin_notice_minimum_elementor_version()
     );
 
     printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
-
 }
 /**
  * Admin notice
@@ -160,5 +176,4 @@ function goee_admin_notice_minimum_php_version()
     );
 
     printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
-
 }
