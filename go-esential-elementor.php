@@ -74,8 +74,10 @@ function goee_register_widget($widgets_manager)
     require_once( GOEE_PATH . '/widgets/GOEE_Pricing_Table.php' );
     require_once( GOEE_PATH . '/widgets/GOEE_Progressbar.php' );
     require_once( GOEE_PATH . '/widgets/GOEE_Iconbox.php' );
+    require_once( GOEE_PATH . '/widgets/GOEE_Image_Carousel.php' );
+    require_once( GOEE_PATH . '/widgets/GOEE_Gallery_Slider.php' );
+    require_once( GOEE_PATH . '/widgets/GOEE_Flipbox.php' );
 
-    // require_once(__DIR__ . '/widgets/GOEE_Image_Carousel.php');
     // require_once(__DIR__ . '/widgets/GOEE_Countdown.php');
     // $widgets_manager->register(new GOEE_Countdown());
 
@@ -85,6 +87,9 @@ function goee_register_widget($widgets_manager)
     $widgets_manager->register(new GOEE_Pricing_Table());
     $widgets_manager->register(new GOEE_Progressbar());
     $widgets_manager->register(new GOEE_Iconbox());
+    $widgets_manager->register(new GOEE_Image_Carousel());
+    $widgets_manager->register(new GOEE_Gallery_Slider());
+    $widgets_manager->register(new GOEE_Flipbox());
 }
 add_action('elementor/widgets/register', 'goee_register_widget');
 
