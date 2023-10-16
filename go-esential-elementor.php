@@ -41,6 +41,8 @@ if (!defined('MINIMUM_ELEMENTOR_VERSION'))
     define('MINIMUM_ELEMENTOR_VERSION', '2.0.0');
 if (!defined('MINIMUM_PHP_VERSION'))
     define('MINIMUM_PHP_VERSION', '8.0');
+if (!defined('GOEE_TEXTDOMAIN')) 
+    define('GOEE_TEXTDOMAIN', 'go-essential-elementor');
 
 function goee_initiate_plugin()
 {
@@ -77,6 +79,7 @@ function goee_register_widget($widgets_manager)
     require_once( GOEE_PATH . '/widgets/GOEE_Image_Carousel.php' );
     require_once( GOEE_PATH . '/widgets/GOEE_Gallery_Slider.php' );
     require_once( GOEE_PATH . '/widgets/GOEE_Flipbox.php' );
+    require_once( GOEE_PATH . '/widgets/GOEE_Button.php' );
 
     // require_once(__DIR__ . '/widgets/GOEE_Countdown.php');
     // $widgets_manager->register(new GOEE_Countdown());
@@ -90,6 +93,7 @@ function goee_register_widget($widgets_manager)
     $widgets_manager->register(new GOEE_Image_Carousel());
     $widgets_manager->register(new GOEE_Gallery_Slider());
     $widgets_manager->register(new GOEE_Flipbox());
+    $widgets_manager->register(new GOEE_Button());
 }
 add_action('elementor/widgets/register', 'goee_register_widget');
 
