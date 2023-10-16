@@ -81,6 +81,7 @@ function goee_register_widget($widgets_manager)
     require_once( GOEE_PATH . '/widgets/GOEE_Flipbox.php' );
     require_once( GOEE_PATH . '/widgets/GOEE_Button.php' );
     require_once( GOEE_PATH . '/widgets/GOEE_Dual_Button.php' );
+    require_once( GOEE_PATH . '/widgets/GOEE_Post_Grid.php' );
 
     // require_once(__DIR__ . '/widgets/GOEE_Countdown.php');
     // $widgets_manager->register(new GOEE_Countdown());
@@ -96,6 +97,7 @@ function goee_register_widget($widgets_manager)
     $widgets_manager->register(new GOEE_Flipbox());
     $widgets_manager->register(new GOEE_Button());
     $widgets_manager->register(new GOEE_Dual_Button());
+    $widgets_manager->register(new GOEE_Post_Grid());
 }
 add_action('elementor/widgets/register', 'goee_register_widget');
 
