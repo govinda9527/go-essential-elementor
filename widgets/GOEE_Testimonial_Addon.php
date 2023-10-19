@@ -24,7 +24,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
     }
 
     public function get_icon() {
-        return 'fa fa-quote-right';
+        return 'eicon-testimonial';
     }
 
     public function get_categories() {
