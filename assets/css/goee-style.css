@@ -77,3 +77,126 @@
         width: 100% !important
     }
 }
+
+/* Contact form 7 */
+
+.goee-contact-form-7 .wpcf7 {
+    width: 100%
+}
+
+.goee-contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 30px
+}
+
+.goee-contact-form .goee-contact-form-title {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #132c47;
+    font-weight: 500
+}
+
+.goee-contact-form .goee-contact-form-input-group {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative
+}
+
+@media (max-width: 575px) {
+    .goee-contact-form .goee-contact-form-input-group {
+        width:100%
+    }
+}
+
+.goee-contact-form-7 input[type="text"],.goee-contact-form-7 input[type="email"],.goee-contact-form-7 input[type="url"],.goee-contact-form-7 input[type="password"],.goee-contact-form-7 input[type="search"],.goee-contact-form-7 input[type="number"],.goee-contact-form-7 input[type="tel"],.goee-contact-form-7 input[type="range"],.goee-contact-form-7 input[type="date"],.goee-contact-form-7 input[type="month"],.goee-contact-form-7 input[type="week"],.goee-contact-form-7 input[type="time"],.goee-contact-form-7 input[type="datetime"],.goee-contact-form-7 input[type="datetime-local"],.goee-contact-form-7 input[type="color"],.goee-contact-form-7 textarea {
+    width: 100%;
+    border: none
+}
+
+.goee-contact-form-7 label {
+    display: block
+}
+
+.goee-contact-form-7 textarea {
+    height: auto
+}
+
+.goee-contact-form .goee-contact-form-input-group label {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 0 0 0 25px
+}
+
+.goee-contact-form .goee-contact-form-input-group label input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.goee-contact-form .goee-contact-form-input-group label input:checked ~ .checkmark:after {
+    display: block
+}
+
+.goee-contact-form .goee-contact-form-input-group label input:checked ~ .checkmark {
+    background-color: #4ce2bd;
+    border: none
+}
+
+.goee-contact-form .goee-contact-form-input-group label .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 1px solid #e3e6ec
+}
+
+.goee-contact-form .goee-contact-form-input-group label .checkmark::after {
+    content: "\e90e";
+    font-family: eicons;
+    position: absolute;
+    display: none;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 12px
+}
+
+.goee-contact-form-7 .wpcf7-form input[type="submit"] {
+    transition: all 0.4s ease;
+    display: flex
+}
+
+.goee-contact-form-7 .goee-cf7-column {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 15px
+}
+
+.goee-contact-form .goee-contact-form-input-action i {
+    margin-left: 10px
+}
+
+.goee-contact-form.two {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.goee-contact-form-7 br {
+    display: none
+}
