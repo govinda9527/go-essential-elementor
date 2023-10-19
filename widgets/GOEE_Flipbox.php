@@ -19,7 +19,7 @@ class GOEE_Flipbox extends Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Flip Box', 'go-essential-elementor' );
+		return esc_html__( 'Flip Box', GOEE_TEXTDOMAIN );
 	}
 
 	public function get_icon() {
@@ -31,7 +31,7 @@ class GOEE_Flipbox extends Widget_Base {
 	}
 
 	public function get_keywords() {
-        return [ 'exclusive', 'info', 'flipbox' ];
+        return [ 'info', 'flipbox' ];
     }
 
 	protected function register_controls() {
@@ -40,29 +40,29 @@ class GOEE_Flipbox extends Widget_Base {
   		$this->start_controls_section(
 			'goee_section_side_a_content',
 			[
-				'label' => __( 'Front', 'go-essential-elementor' )
+				'label' => __( 'Front', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
 			'goee_flipbox_front_icon_image',
 			[
-				'label'         => esc_html__( 'Image or Icon', 'go-essential-elementor' ),
+				'label'         => esc_html__( 'Image or Icon', GOEE_TEXTDOMAIN ),
 				'type'          => Controls_Manager::CHOOSE,
 				'toggle'        => false,
 				'label_block'   => true,
 				'default'       => 'icon',
 				'options'       => [
 					'none'      => [
-						'title' => esc_html__( 'None', 'go-essential-elementor' ),
+						'title' => esc_html__( 'None', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-ban'
 					],
 					'icon'      => [
-						'title' => esc_html__( 'Icon', 'go-essential-elementor' ),
+						'title' => esc_html__( 'Icon', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-info-circle'
 					],
 					'img'       => [
-						'title' => esc_html__( 'Image', 'go-essential-elementor' ),
+						'title' => esc_html__( 'Image', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-image-bold'
 					]
 				]
@@ -72,7 +72,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_icon',
 			[
-				'label'   => __( 'Icon', 'go-essential-elementor' ),
+				'label'   => __( 'Icon', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::ICONS,
                 'default' => [
 					'value'   => 'fas fa-heart',
@@ -87,7 +87,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_image',
 			[
-				'label'     => esc_html__( 'Image', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Image', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::MEDIA,
 				'default'   => [
 					'url'   => Utils::get_placeholder_image_src()
@@ -115,18 +115,18 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_title',
 			[
-				'label'       => __( 'Title', 'go-essential-elementor' ),
+				'label'       => __( 'Title', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'dynamic'     => [ 'active' => true ],
-				'default'     => __( 'Heading Front', 'go-essential-elementor' ),
-				'placeholder' => __( 'Your Title', 'go-essential-elementor' )
+				'default'     => __( 'Heading Front', GOEE_TEXTDOMAIN ),
+				'placeholder' => __( 'Your Title', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
             'goee_flipbox_front_title_html_tag',
             [
-                'label'   => __('Title HTML Tag', 'go-essential-elementor'),
+                'label'   => __('Title HTML Tag', GOEE_TEXTDOMAIN),
                 'type'    => Controls_Manager::SELECT,
                 'options' => Helper::goee_title_tags(),
                 'default' => 'h3',
@@ -136,12 +136,12 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_description',
 			[
-				'label'       => __( 'Description', 'go-essential-elementor' ),
+				'label'       => __( 'Description', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXTAREA,
 				'dynamic'     => [ 'active' => true ],
-				'default'     => __( 'Click edit button to change this text. Lorem ipsum dolor sit amet consectetur adipiscing elit dolor. Add some more test in here.', 'go-essential-elementor' ),
-				'placeholder' => __( 'Your Description', 'go-essential-elementor' ),
-				'title'       => __( 'Input image text here', 'go-essential-elementor' )
+				'default'     => __( 'Click edit button to change this text. Lorem ipsum dolor sit amet consectetur adipiscing elit dolor. Add some more test in here.', GOEE_TEXTDOMAIN ),
+				'placeholder' => __( 'Your Description', GOEE_TEXTDOMAIN ),
+				'title'       => __( 'Input image text here', GOEE_TEXTDOMAIN )
 			]
 		);
 	
@@ -150,29 +150,29 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_back_content',
 			[
-				'label' => __( 'Back', 'go-essential-elementor' )
+				'label' => __( 'Back', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
 			'goee_flipbox_back_icon_image',
 			[
-				'label'         => esc_html__( 'Image or Icon', 'go-essential-elementor' ),
+				'label'         => esc_html__( 'Image or Icon', GOEE_TEXTDOMAIN ),
 				'type'          => Controls_Manager::CHOOSE,
 				'toggle'        => false,
 				'label_block'   => true,
 				'default'       => 'icon',
 				'options'       => [
 					'none'      => [
-						'title' => esc_html__( 'None', 'go-essential-elementor' ),
+						'title' => esc_html__( 'None', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-ban'
 					],
 					'icon'      => [
-						'title' => esc_html__( 'Icon', 'go-essential-elementor' ),
+						'title' => esc_html__( 'Icon', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-info-circle'
 					],
 					'img'       => [
-						'title' => esc_html__( 'Image', 'go-essential-elementor' ),
+						'title' => esc_html__( 'Image', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-image-bold'
 					]
 				]
@@ -182,7 +182,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_icon',
 			[
-				'label'     => __( 'Icon', 'go-essential-elementor' ),
+				'label'     => __( 'Icon', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::ICONS,
 				'condition' => [
 					'goee_flipbox_back_icon_image' => 'icon'
@@ -193,7 +193,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_image',
 			[
-				'label'     => esc_html__( 'Image', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Image', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::MEDIA,
 				'default'   => [
 					'url'   => Utils::get_placeholder_image_src()
@@ -218,18 +218,18 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_title',
 			[
-				'label'       => __( 'Title', 'go-essential-elementor' ),
+				'label'       => __( 'Title', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'dynamic'     => [ 'active' => true ],
-				'default'     => __( 'Heading Back', 'go-essential-elementor' ),
-				'placeholder' => __( 'Your Title', 'go-essential-elementor' )
+				'default'     => __( 'Heading Back', GOEE_TEXTDOMAIN ),
+				'placeholder' => __( 'Your Title', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
             'goee_flipbox_back_title_html_tag',
             [
-                'label'   => __('Title HTML Tag', 'go-essential-elementor'),
+                'label'   => __('Title HTML Tag', GOEE_TEXTDOMAIN),
                 'type'    => Controls_Manager::SELECT,
                 'options' => Helper::goee_title_tags(),
                 'default' => 'h2',
@@ -239,12 +239,12 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_description',
 			[
-				'label'       => __( 'Description', 'go-essential-elementor' ),
+				'label'       => __( 'Description', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXTAREA,
 				'dynamic'     => [ 'active' => true ],
-				'default'     => __( 'Click edit button to change this text. Lorem ipsum dolor sit amet consectetur adipiscing elit dolor', 'go-essential-elementor' ),
-				'placeholder' => __( 'Your Description', 'go-essential-elementor' ),
-				'title'       => __( 'Input image text here', 'go-essential-elementor' ),
+				'default'     => __( 'Click edit button to change this text. Lorem ipsum dolor sit amet consectetur adipiscing elit dolor', GOEE_TEXTDOMAIN ),
+				'placeholder' => __( 'Your Description', GOEE_TEXTDOMAIN ),
+				'title'       => __( 'Input image text here', GOEE_TEXTDOMAIN ),
 				'separator'   => 'none'
 			]
 		);
@@ -252,10 +252,10 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_button_enable',
 			[
-				'label' => __( 'Show Button', 'go-essential-elementor' ),
+				'label' => __( 'Show Button', GOEE_TEXTDOMAIN ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'go-essential-elementor' ),
-				'label_off' => __( 'Hide', 'go-essential-elementor' ),
+				'label_on' => __( 'Show', GOEE_TEXTDOMAIN ),
+				'label_off' => __( 'Hide', GOEE_TEXTDOMAIN ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -264,10 +264,10 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_button_text',
 			[
-				'label'     => __( 'Button Text', 'go-essential-elementor' ),
+				'label'     => __( 'Button Text', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::TEXT,
 				'dynamic'   => [ 'active' => true ],
-				'default'   => __( 'Read More', 'go-essential-elementor' ),
+				'default'   => __( 'Read More', GOEE_TEXTDOMAIN ),
 				'separator' => 'before',
 				'condition' => [
 					'goee_flipbox_back_button_enable' => 'yes'
@@ -278,7 +278,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_button_link',
 			[
-				'label'       => __( 'Link', 'go-essential-elementor' ),
+				'label'       => __( 'Link', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::URL,
 				'label_block' => true,
 				'default'     => [
@@ -297,26 +297,26 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_flipbox_settings',
 			[
-				'label' => __( 'Flip Settings', 'go-essential-elementor' )
+				'label' => __( 'Flip Settings', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
 			'goee_flipbox_style',
 			[
-				'label'   => __( 'Flip Direction', 'go-essential-elementor' ),
+				'label'   => __( 'Flip Direction', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'left-to-right',
 				'options' => [
-					'left-to-right'       => __( 'Left to Right', 'go-essential-elementor' ),
-					'right-to-left'       => __( 'Right to Left', 'go-essential-elementor' ),
-					'top-to-bottom'       => __( 'Top to Bottom', 'go-essential-elementor' ),
-					'bottom-to-top'       => __( 'Bottom to Top', 'go-essential-elementor' ),
-					'top-to-bottom-angle' => __( 'Diagonal (Top to Bottom)', 'go-essential-elementor' ),
-					'bottom-to-top-angle' => __( 'Diagonal (Bottom to Top)', 'go-essential-elementor' ),
-					'fade-in-out'         => __( 'Fade In Out', 'go-essential-elementor' ),
-					'three-d-flip'        => __( '3D Rotation', 'go-essential-elementor' ),
-					'fade'        		  => __( 'Fade', 'go-essential-elementor' ),
+					'left-to-right'       => __( 'Left to Right', GOEE_TEXTDOMAIN ),
+					'right-to-left'       => __( 'Right to Left', GOEE_TEXTDOMAIN ),
+					'top-to-bottom'       => __( 'Top to Bottom', GOEE_TEXTDOMAIN ),
+					'bottom-to-top'       => __( 'Bottom to Top', GOEE_TEXTDOMAIN ),
+					'top-to-bottom-angle' => __( 'Diagonal (Top to Bottom)', GOEE_TEXTDOMAIN ),
+					'bottom-to-top-angle' => __( 'Diagonal (Bottom to Top)', GOEE_TEXTDOMAIN ),
+					'fade-in-out'         => __( 'Fade In Out', GOEE_TEXTDOMAIN ),
+					'three-d-flip'        => __( '3D Rotation', GOEE_TEXTDOMAIN ),
+					'fade'        		  => __( 'Fade', GOEE_TEXTDOMAIN ),
 				]
 				
 			]
@@ -327,7 +327,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_flipbox_container',
 			[
-				'label' => __( 'Container', 'go-essential-elementor' ),
+				'label' => __( 'Container', GOEE_TEXTDOMAIN ),
 				'tab' => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -335,7 +335,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_3d_height',
 			[
-				'label'      => __( 'Height', 'go-essential-elementor' ),
+				'label'      => __( 'Height', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range'      => [
@@ -365,7 +365,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->start_controls_section(
 			'goee_front_end_style_section',
 			[
-				'label' => __( 'Front', 'go-essential-elementor' ),
+				'label' => __( 'Front', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -373,7 +373,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_container',
 			[
-				'label'     => esc_html__( 'Container', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Container', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING
 			]
 		);
@@ -390,7 +390,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_background_oberlay',
 			[
-				'label'     => esc_html__( 'Background Overlay', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Background Overlay', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'separator' => 'before',
 				'selectors'  => [
@@ -402,7 +402,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_front_padding',
 			[
-				'label'      => __( 'Padding', 'go-essential-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -444,7 +444,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_front_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'go-essential-elementor' ),
+				'label'      => __( 'Border Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -457,7 +457,7 @@ class GOEE_Flipbox extends Widget_Base {
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name'     => 'goee_flipbox_front_box_shadow',
-				'label'    => __( 'Box Shadow', 'go-essential-elementor' ),
+				'label'    => __( 'Box Shadow', GOEE_TEXTDOMAIN ),
 				'selector' => '{{WRAPPER}} .goee-flip-box .goee-flip-box-front'
 			]
 		);
@@ -465,20 +465,20 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
             'goee_flipbox_front_content_alignment',
             [
-                'label'          => esc_html__( 'Alignment', 'go-essential-elementor' ),
+                'label'          => esc_html__( 'Alignment', GOEE_TEXTDOMAIN ),
                 'type'           => Controls_Manager::CHOOSE,
                 'toggle'         => false,
                 'options'        => [
                     'left'       => [
-                        'title'  => __( 'Left', 'go-essential-elementor' ),
+                        'title'  => __( 'Left', GOEE_TEXTDOMAIN ),
                         'icon'   => 'eicon-h-align-left'
                     ],
                     'center'     => [
-                        'title'  => __( 'Center', 'go-essential-elementor' ),
+                        'title'  => __( 'Center', GOEE_TEXTDOMAIN ),
                         'icon'   => 'eicon-h-align-center'
                     ],
                     'right'      => [
-                        'title'  => __( 'Right', 'go-essential-elementor' ),
+                        'title'  => __( 'Right', GOEE_TEXTDOMAIN ),
                         'icon'   => 'eicon-h-align-right'
                     ]
                 ],
@@ -489,7 +489,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_icon_style',
 			[
-				'label'     => esc_html__( 'Icon', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Icon', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -501,7 +501,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_front_icon_box_height_width',
 			[
-				'label'       => __( 'Box Size/Image Size', 'go-essential-elementor' ),
+				'label'       => __( 'Box Size/Image Size', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'size_units'  => [ 'px' ],
 				'range'       => [
@@ -526,7 +526,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
             'goee_flipbox_front_icon_size',
             [
-                'label'        => esc_html__( 'Icon Size', 'go-essential-elementor' ),
+                'label'        => esc_html__( 'Icon Size', GOEE_TEXTDOMAIN ),
                 'type'         => Controls_Manager::SLIDER,
                 'range'        => [
                     'px'       => [
@@ -553,7 +553,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_icon_color',
 			[
-				'label'     => esc_html__( 'Color', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => $goee_primary_color,
 				'selectors' => [
@@ -569,7 +569,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_icon_bg_color',
 			[
-				'label'     => esc_html__( 'Background Color', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Background Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -584,7 +584,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_front_icon_border_radius',
 			[
-				'label'      => esc_html__( 'Border Radius', 'go-essential-elementor' ),
+				'label'      => esc_html__( 'Border Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'selectors'  => [
@@ -599,7 +599,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_title_heading',
 			[
-				'label'     => esc_html__( 'Title', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Title', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -608,7 +608,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_title_color',
 			[
-				'label'     => esc_html__( 'Color', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#132c47',
 				'selectors' => [
@@ -637,7 +637,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
             'goee_flipbox_front_title_margin',
             [
-				'label'      => __('Margin', 'go-essential-elementor'),
+				'label'      => __('Margin', GOEE_TEXTDOMAIN),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%'],
 				'default'    => [
@@ -657,7 +657,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_content_heading',
 			[
-				'label'     => esc_html__( 'Description', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Description', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -666,7 +666,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_front_content_color',
 			[
-				'label'     => esc_html__( 'Color', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#817e7e',
 				'selectors' => [
@@ -687,7 +687,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
             'goee_flipbox_front_content_margin',
             [
-				'label'      => __('Margin', 'go-essential-elementor'),
+				'label'      => __('Margin', GOEE_TEXTDOMAIN),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%'],
 				'selectors'  => [
@@ -706,7 +706,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->start_controls_section(
 			'goee_back_end_style_section',
 			[
-				'label' => __( 'Back', 'go-essential-elementor' ),
+				'label' => __( 'Back', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -714,7 +714,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_container_heading',
 			[
-				'label'     => esc_html__( 'Container', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Container', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -740,7 +740,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_background_oberlay',
 			[
-				'label'     => esc_html__( 'Background Overlay', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Background Overlay', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'separator' => 'before',
 				'selectors'  => [
@@ -752,7 +752,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_back_padding',
 			[
-				'label'      => __( 'Padding', 'go-essential-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -780,7 +780,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_back_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'go-essential-elementor' ),
+				'label'      => __( 'Border Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -793,7 +793,7 @@ class GOEE_Flipbox extends Widget_Base {
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name'     => 'goee_flipbox_back_box_shadow',
-				'label'    => __( 'Box Shadow', 'go-essential-elementor' ),
+				'label'    => __( 'Box Shadow', GOEE_TEXTDOMAIN ),
 				'selector' => '{{WRAPPER}} .goee-flip-box .goee-flip-box-back'
 			]
 		);
@@ -801,20 +801,20 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
             'goee_flipbox_back_content_alignment',
             [
-                'label'          => esc_html__( 'Alignment', 'go-essential-elementor' ),
+                'label'          => esc_html__( 'Alignment', GOEE_TEXTDOMAIN ),
                 'type'           => Controls_Manager::CHOOSE,
                 'toggle'         => false,
                 'options'        => [
                     'left'       => [
-                        'title'  => __( 'Left', 'go-essential-elementor' ),
+                        'title'  => __( 'Left', GOEE_TEXTDOMAIN ),
                         'icon'   => 'eicon-h-align-left'
                     ],
                     'center'     => [
-                        'title'  => __( 'Center', 'go-essential-elementor' ),
+                        'title'  => __( 'Center', GOEE_TEXTDOMAIN ),
                         'icon'   => 'eicon-h-align-center'
                     ],
                     'right'      => [
-                        'title'  => __( 'Right', 'go-essential-elementor' ),
+                        'title'  => __( 'Right', GOEE_TEXTDOMAIN ),
                         'icon'   => 'eicon-h-align-right'
                     ]
                 ],
@@ -825,7 +825,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_icon_style',
 			[
-				'label'     => esc_html__( 'Icon', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Icon', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -837,7 +837,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_back_icon_box_height_width',
 			[
-				'label'       => __( 'Box Size/Image Size', 'go-essential-elementor' ),
+				'label'       => __( 'Box Size/Image Size', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'size_units'  => [ 'px' ],
 				'range'       => [
@@ -862,7 +862,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
             'goee_flipbox_back_icon_size',
             [
-                'label'        => esc_html__( 'Icon Size', 'go-essential-elementor' ),
+                'label'        => esc_html__( 'Icon Size', GOEE_TEXTDOMAIN ),
                 'type'         => Controls_Manager::SLIDER,
                 'range'        => [
                     'px'       => [
@@ -885,7 +885,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_icon_color',
 			[
-				'label'     => esc_html__( 'Color', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#ffffff',
 				'selectors' => [
@@ -901,7 +901,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_icon_bg_color',
 			[
-				'label'     => esc_html__( 'Background Color', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Background Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -917,7 +917,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_back_icon_border_radius',
 			[
-				'label'      => esc_html__( 'Border Radius', 'go-essential-elementor' ),
+				'label'      => esc_html__( 'Border Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'selectors'  => [
@@ -932,7 +932,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_title_heading',
 			[
-				'label'     => esc_html__( 'Title', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Title', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -941,7 +941,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_title_color',
 			[
-				'label'     => esc_html__( 'Color', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#ffffff',
 				'selectors' => [
@@ -962,7 +962,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
             'goee_flipbox_back_title_margin',
             [
-				'label'      => __('Margin', 'go-essential-elementor'),
+				'label'      => __('Margin', GOEE_TEXTDOMAIN),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%'],
 				'default'    => [
@@ -982,7 +982,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_details_heading',
 			[
-				'label'     => esc_html__( 'Details', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Details', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -991,7 +991,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_details_color',
 			[
-				'label'     => esc_html__( 'Color', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#ffffff',
 				'selectors' => [
@@ -1012,7 +1012,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
             'goee_flipbox_back_details_margin',
             [
-				'label'      => __('Margin', 'go-essential-elementor'),
+				'label'      => __('Margin', GOEE_TEXTDOMAIN),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%'],
 				'default'    => [
@@ -1032,7 +1032,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_control(
 			'goee_flipbox_back_button',
 			[
-				'label'     => esc_html__( 'Button', 'go-essential-elementor' ),
+				'label'     => esc_html__( 'Button', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -1054,7 +1054,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_button_padding',
 			[
-                'label'      => __( 'Padding', 'go-essential-elementor' ),
+                'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
                 'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px' ],
                 'default'    => [
@@ -1074,7 +1074,7 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_flipbox_button_margin',
 			[
-                'label'      => __( 'Margin', 'go-essential-elementor' ),
+                'label'      => __( 'Margin', GOEE_TEXTDOMAIN ),
                 'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px' ],
 				'selectors'  => [
@@ -1086,7 +1086,7 @@ class GOEE_Flipbox extends Widget_Base {
         $this->add_responsive_control(
           'goee_flipbox_button_border_radius',
             [
-                'label'      => esc_html__( 'Border Radius', 'go-essential-elementor' ),
+                'label'      => esc_html__( 'Border Radius', GOEE_TEXTDOMAIN ),
                 'type'       => Controls_Manager::DIMENSIONS,
                 'default'    => [
                     'top'    => '4',
@@ -1104,7 +1104,7 @@ class GOEE_Flipbox extends Widget_Base {
             Group_Control_Box_Shadow::get_type(),
             [
                 'name'     => 'goee_flipbox_button_box_shadow',
-                'label'    => __( 'Box Shadow', 'go-essential-elementor' ),
+                'label'    => __( 'Box Shadow', GOEE_TEXTDOMAIN ),
                 'selector' => '{{WRAPPER}} .goee-flip-box .goee-flip-box-back .goee-flip-box-back-action'
             ]
         );
@@ -1112,12 +1112,12 @@ class GOEE_Flipbox extends Widget_Base {
 		$this->start_controls_tabs( 'goee_cta_button_tabs' );
 
 			// Normal State Tab
-			$this->start_controls_tab( 'goee_flipbox_btn_normal', [ 'label' => esc_html__( 'Normal', 'go-essential-elementor' ) ] );
+			$this->start_controls_tab( 'goee_flipbox_btn_normal', [ 'label' => esc_html__( 'Normal', GOEE_TEXTDOMAIN ) ] );
 
 				$this->add_control(
 					'goee_flipbox_btn_normal_text_color',
 					[
-						'label'     => esc_html__( 'Text Color', 'go-essential-elementor' ),
+						'label'     => esc_html__( 'Text Color', GOEE_TEXTDOMAIN ),
 						'type'      => Controls_Manager::COLOR,
 						'default'   => '#ffffff',
 						'selectors' => [
@@ -1129,7 +1129,7 @@ class GOEE_Flipbox extends Widget_Base {
 				$this->add_control(
 					'goee_flipbox_btn_normal_bg_color',
 					[
-						'label'     => esc_html__( 'Background Color', 'go-essential-elementor' ),
+						'label'     => esc_html__( 'Background Color', GOEE_TEXTDOMAIN ),
 						'type'      => Controls_Manager::COLOR,
 						'default'   => '',
 						'selectors' => [
@@ -1165,12 +1165,12 @@ class GOEE_Flipbox extends Widget_Base {
 			$this->end_controls_tab();
 
 			// Hover State Tab
-			$this->start_controls_tab( 'goee_flipbox_btn_hover', [ 'label' => esc_html__( 'Hover', 'go-essential-elementor' ) ] );
+			$this->start_controls_tab( 'goee_flipbox_btn_hover', [ 'label' => esc_html__( 'Hover', GOEE_TEXTDOMAIN ) ] );
 
 				$this->add_control(
 					'goee_flipbox_btn_hover_text_color',
 					[
-						'label'     => esc_html__( 'Text Color', 'go-essential-elementor' ),
+						'label'     => esc_html__( 'Text Color', GOEE_TEXTDOMAIN ),
 						'type'      => Controls_Manager::COLOR,
 						'default'   => '#000000',
 						'selectors' => [
@@ -1182,7 +1182,7 @@ class GOEE_Flipbox extends Widget_Base {
 				$this->add_control(
 					'goee_flipbox_btn_hover_bg_color',
 					[
-						'label'     => esc_html__( 'Background Color', 'go-essential-elementor' ),
+						'label'     => esc_html__( 'Background Color', GOEE_TEXTDOMAIN ),
 						'type'      => Controls_Manager::COLOR,
 						'default'   => '#ffffff',
 						'selectors' => [
