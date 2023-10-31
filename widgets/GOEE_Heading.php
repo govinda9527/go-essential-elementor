@@ -22,7 +22,7 @@ class GOEE_Heading extends Widget_Base {
 		return esc_html__( 'Heading', GOEE_TEXTDOMAIN );
 	}
 	public function get_icon() {
-		return 'goee goee-logo goee-heading';
+		return 'goee goee-logo eicon-heading';
 	}
 	public function get_categories() {
 		return [ 'goee-category' ];

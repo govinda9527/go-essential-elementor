@@ -89,6 +89,7 @@ function goee_register_widget($widgets_manager)
     require_once( GOEE_PATH . 'widgets/GOEE_Contact_Form_7.php' );
     require_once( GOEE_PATH . 'widgets/GOEE_Logobox.php' );
     require_once( GOEE_PATH . 'widgets/GOEE_News_Ticker.php' );
+    require_once( GOEE_PATH . 'widgets/GOEE_Tooltips.php' );
 
     // require_once(__DIR__ . '/widgets/GOEE_Countdown.php');
     // $widgets_manager->register(new GOEE_Countdown());
@@ -112,6 +113,7 @@ function goee_register_widget($widgets_manager)
     $widgets_manager->register(new GOEE_Contact_Form_7());
     $widgets_manager->register(new GOEE_Logobox());
     $widgets_manager->register(new GOEE_News_Ticker());
+    $widgets_manager->register(new GOEE_Tooltips());
 }
 add_action('elementor/widgets/register', 'goee_register_widget');
 
