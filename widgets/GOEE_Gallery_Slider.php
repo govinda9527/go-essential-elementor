@@ -21,7 +21,7 @@ class GOEE_Gallery_Slider extends Widget_Base {
 
 	// Widget icon
 	public function get_icon() {
-		return 'eicon-thumbnails-down';
+		return 'goee goee-logo eicon-thumbnails-down';
 	}
 
 	// Category the widget belongs to

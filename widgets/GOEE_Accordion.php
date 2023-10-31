@@ -10,14 +10,11 @@ use \Elementor\Group_Control_Box_Shadow;
 use \Elementor\Group_Control_Typography;
 use \Elementor\Group_Control_Image_Size;
 use \Elementor\Group_Control_Css_Filter;
-use \Elementor\Control_Media;
 use \Elementor\Icons_Manager;
 use \Elementor\Repeater;
 use \Elementor\Widget_Base;
 use \Elementor\Utils;
-
 use \GOEE_Addons_Elementor\classes\Helper;
-use \GGOEE_Addons_Elementor\Controls\Select2;
 
 class GOEE_Accordion extends Widget_Base
 {
@@ -25,7 +22,7 @@ class GOEE_Accordion extends Widget_Base
 
 	public function get_name()
 	{
-		return 'goee-exclusive-accordion';
+		return 'goee-accordion';
 	}
 
 	public function get_title()
@@ -35,13 +32,13 @@ class GOEE_Accordion extends Widget_Base
 
 	public function get_icon()
 	{
-		return 'eicon-accordion';
+		return 'goee goee-logo eicon-accordion';
 	}
 
 
 	public function get_keywords()
 	{
-		return ['exclusive', 'toggle', 'govinda'];
+		return ['toggle'];
 	}
 
 	public function get_categories()

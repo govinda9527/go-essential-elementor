@@ -19,15 +19,15 @@ class GOEE_Countdown extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-time-line';
+		return 'goee goee-logo eicon-time-line';
 	}
 
 	public function get_keywords() {
-        return [ 'exclusive', 'coming', 'soon', 'govinda' ];
+        return [ 'coming', 'soon', ];
     }
 
 	public function get_categories() {
-		return [ 'basic' ];
+		return [ 'goee-category' ];
 	}
 
 	public function get_script_depends() {
@@ -552,40 +552,6 @@ class GOEE_Countdown extends Widget_Base {
 			<div <?php echo $this->get_render_attribute_string('goee-countdown-timer-attribute'); ?>></div>
 		</div>
 		
-		<?php
-	}
-
-	/**
-     * Render countDown timer widget output in the editor.
-     *
-     * Written as a Backbone JavaScript template and used to generate the live preview.
-     *
-     * @since 1.0.0
-     * @access protected
-     */
-	protected function content_template() {
-		?>
-		<#
-			view.addRenderAttribute( 'goee_countdown_timer_attribute', 'class', 'goee-countdown' );
-			if ( 'yes' === settings.goee_countdown_divider_enable ) {
-				view.addRenderAttribute( 'goee_countdown_timer_attribute', 'class', 'goee-countdown-divider' );
-			}
-
-			view.addRenderAttribute( 'goee_countdown_timer_attribute', {
-				'data-day': 'Days',
-				'data-minutes': 'Minutes',
-				'data-hours': 'Hours',
-				'data-seconds': 'Seconds',
-				'data-countdown': settings.goee_countdown_time,
-				'data-expired-text': settings.goee_countdown_expired_text
-			} );
-		#>
-
-		<div class="goee-countdown-content-container {{ settings.goee_section_countdown_show_box }}">
-			<div {{{ view.getRenderAttributeString( 'goee_countdown_timer_attribute' ) }}}>
-			</div>
-		</div>
-
 		<?php
 	}
 

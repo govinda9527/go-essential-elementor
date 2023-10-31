@@ -24,7 +24,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
     }
 
     public function get_icon() {
-        return 'eicon-testimonial';
+        return 'goee goee-logo eicon-testimonial';
     }
 
     public function get_categories() {
@@ -40,14 +40,14 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->start_controls_section(
 			'goee_testimonial_section',
 			[
-				'label' => esc_html__( 'Contents', 'exclusive-addons-elementor' )
+				'label' => esc_html__( 'Contents', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
 			'goee_testimonial_image',
 			[
-				'label'   => __( 'Image', 'exclusive-addons-elementor' ),
+				'label'   => __( 'Image', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src()
@@ -71,9 +71,9 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_description',
 			[
-				'label'   => esc_html__( 'Testimonial', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Testimonial', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.', 'exclusive-addons-elementor' ),
+				'default' => esc_html__( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.', GOEE_TEXTDOMAIN ),
 				'dynamic' => [
 					'active' => true,
 				]
@@ -83,9 +83,9 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_name',
 			[
-				'label'   => esc_html__( 'Name', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Name', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => esc_html__( 'John Doe', 'exclusive-addons-elementor' ),
+				'default' => esc_html__( 'John Doe', GOEE_TEXTDOMAIN ),
 				'dynamic' => [
 					'active' => true,
 				]
@@ -95,7 +95,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
             'goee_testimonial_name_tag',
             [
-                'label'   => __('Name HTML Tag', 'exclusive-addons-elementor'),
+                'label'   => __('Name HTML Tag', GOEE_TEXTDOMAIN),
                 'type'    => Controls_Manager::SELECT,
                 'options' => Helper::goee_title_tags(),
                 'default' => 'h4',
@@ -105,9 +105,9 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_url',
 			[
-				'label' => __( 'URL', 'exclusive-addons-elementor' ),
+				'label' => __( 'URL', GOEE_TEXTDOMAIN ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'exclusive-addons-elementor' ),
+				'placeholder' => __( 'https://your-link.com', GOEE_TEXTDOMAIN ),
 				'show_external' => true,
 				'default' => [
 					'url' => '',
@@ -120,9 +120,9 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_designation',
 			[
-				'label'   => esc_html__( 'Designation', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Designation', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Co-Founder', 'exclusive-addons-elementor' ),
+				'default' => esc_html__( 'Co-Founder', GOEE_TEXTDOMAIN ),
 				'dynamic' => [
 					'active' => true,
 				]
@@ -132,7 +132,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_enable_rating',
 			[
-				'label'   => esc_html__( 'Display Rating?', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Display Rating?', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'no'
 			]
@@ -141,7 +141,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_rating_icon',
 			[
-				'label' => __( 'Rating Icon', 'exclusive-addons-elementor' ),
+				'label' => __( 'Rating Icon', GOEE_TEXTDOMAIN ),
 				'type' => Controls_Manager::ICONS,
 				'label_block' => false,
 				'default' => [
@@ -162,7 +162,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 		  	'goee_testimonial_rating_number',
 		  	[
-				'label'   => __( 'Rating Number', 'exclusive-addons-elementor' ),
+				'label'   => __( 'Rating Number', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 5,
 				'options' => $rating_number,
@@ -181,7 +181,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->start_controls_section(
 			'goee_testimonial_container_section_style',
 			[
-				'label' => esc_html__( 'Container', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Container', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -189,12 +189,12 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_layout',
 			[
-				'label' => __( 'Layout', 'exclusive-addons-elementor' ),
+				'label' => __( 'Layout', GOEE_TEXTDOMAIN ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'layout-1',
 				'options' => [
-					'layout-1'  => __( 'Layout 1', 'exclusive-addons-elementor' ),
-					'layout-2' => __( 'Layout 2', 'exclusive-addons-elementor' ),
+					'layout-1'  => __( 'Layout 1', GOEE_TEXTDOMAIN ),
+					'layout-2' => __( 'Layout 2', GOEE_TEXTDOMAIN ),
 				],
 			]
 		);
@@ -202,25 +202,25 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_container_alignment',
 			[
-				'label'   => __( 'Alignment', 'exclusive-addons-elementor' ),
+				'label'   => __( 'Alignment', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::CHOOSE,
 				'toggle'  => false,
 				'default' => 'exad-testimonial-align-left',
 				'options' => [
 					'exad-testimonial-align-left'   => [
-						'title' => __( 'Left', 'exclusive-addons-elementor' ),
+						'title' => __( 'Left', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-arrow-left'
 					],
 					'exad-testimonial-align-center' => [
-						'title' => __( 'Center', 'exclusive-addons-elementor' ),
+						'title' => __( 'Center', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-arrow-up'
 					],
 					'exad-testimonial-align-right'  => [
-						'title' => __( 'Right', 'exclusive-addons-elementor' ),
+						'title' => __( 'Right', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-arrow-right'
 					],
 					'exad-testimonial-align-bottom' => [
-						'title' => __( 'Bottom', 'exclusive-addons-elementor' ),
+						'title' => __( 'Bottom', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-arrow-down'
 					]
 				]
@@ -230,7 +230,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_container_padding',
 			[
-				'label'      => __( 'Padding', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'separator'  => 'before',
@@ -249,7 +249,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_container_radius',
 			[
-				'label'      => __( 'Border radius', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Border radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -266,7 +266,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 
 		$this->start_controls_tabs( 'goee_testimonial_container_tabs' );
 
-			$this->start_controls_tab( 'goee_testimonial_container_normal', [ 'label' => esc_html__( 'Normal', 'exclusive-addons-elementor' ) ] );
+			$this->start_controls_tab( 'goee_testimonial_container_normal', [ 'label' => esc_html__( 'Normal', GOEE_TEXTDOMAIN ) ] );
 
 				$this->add_group_control(
 					Group_Control_Background::get_type(),
@@ -311,7 +311,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 
 			$this->end_controls_tab();
 	
-			$this->start_controls_tab( 'goee_testimonial_container_hover', [ 'label' => esc_html__( 'Hover', 'exclusive-addons-elementor' ) ] );
+			$this->start_controls_tab( 'goee_testimonial_container_hover', [ 'label' => esc_html__( 'Hover', GOEE_TEXTDOMAIN ) ] );
 
 				$this->add_group_control(
 					Group_Control_Background::get_type(),
@@ -361,10 +361,10 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_container_transition_top',
             [
-				'label'        => __( 'Transition Top', 'exclusive-addons-elementor' ),
+				'label'        => __( 'Transition Top', GOEE_TEXTDOMAIN ),
 				'type'         =>  Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Show', 'exclusive-addons-elementor' ),
-				'label_off'    => __( 'Hide', 'exclusive-addons-elementor' ),
+				'label_on'     => __( 'Show', GOEE_TEXTDOMAIN ),
+				'label_off'    => __( 'Hide', GOEE_TEXTDOMAIN ),
 				'separator'   => 'before',
 				'return_value' => 'yes',
 				'default'      => 'yes'
@@ -379,7 +379,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->start_controls_section(
 			'goee_testimonial_image_style',
 			[
-				'label' => esc_html__( 'Reviewer Image', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Reviewer Image', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -387,10 +387,10 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_image_box',
 			[
-				'label'        => __( 'Image Box', 'exclusive-addons-elementor' ),
+				'label'        => __( 'Image Box', GOEE_TEXTDOMAIN ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'ON', 'exclusive-addons-elementor' ),
-				'label_off'    => __( 'OFF', 'exclusive-addons-elementor' ),
+				'label_on'     => __( 'ON', GOEE_TEXTDOMAIN ),
+				'label_off'    => __( 'OFF', GOEE_TEXTDOMAIN ),
 				'return_value' => 'yes',
 				'default'      => 'yes'
 			]
@@ -399,7 +399,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_image_box_height',
 			[
-				'label'       => __( 'Height', 'exclusive-addons-elementor' ),
+				'label'       => __( 'Height', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'size_units'  => [ 'px' ],
 				'range'       => [
@@ -424,7 +424,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_image_box_width',
 			[
-				'label'       => __( 'Width', 'exclusive-addons-elementor' ),
+				'label'       => __( 'Width', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'separator'   => 'after',
 				'range'       => [
@@ -464,7 +464,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_image_box_radius',
 			[
-				'label'      => __( 'Border radius', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Border radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -492,7 +492,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_image_box_margin_bottom',
 			[
-				'label'       => __( 'Bottom Spacing', 'exclusive-addons-elementor' ),
+				'label'       => __( 'Bottom Spacing', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'size_units'  => [ 'px' ],
 				'range'       => [
@@ -530,7 +530,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->start_controls_section(
 			'goee_testimonial_description_style',
 			[
-				'label' => esc_html__( 'Testimonial', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Testimonial', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -546,7 +546,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_description_color',
 			[
-				'label'     => __( 'Text Color', 'exclusive-addons-elementor' ),
+				'label'     => __( 'Text Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#222222',
 				'selectors' => [
@@ -558,7 +558,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_description_bg_color',
 			[
-				'label'     => __( 'Background Color', 'exclusive-addons-elementor' ),
+				'label'     => __( 'Background Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .exad-testimonial-content-wrapper'               => 'background: {{VALUE}};',
@@ -570,7 +570,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_description_radius',
 			[
-				'label'      => __( 'Border Radius', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Border Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -588,7 +588,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_description_spacing_bottom',
 			[
-				'label'       => __( 'Bottom Spacing', 'exclusive-addons-elementor' ),
+				'label'       => __( 'Bottom Spacing', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'size_units'  => [ 'px' ],
 				'range'       => [
@@ -613,7 +613,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_description_spacing_top',
 			[
-				'label'       => __( 'Top Spacing', 'exclusive-addons-elementor' ),
+				'label'       => __( 'Top Spacing', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'size_units'  => [ 'px' ],
 				'range'       => [
@@ -638,7 +638,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_description_padding',
 			[
-				'label'      => __( 'Padding', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -664,10 +664,10 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_description_arrow_enable',
 			[
-				'label'        => __( 'Show Arrow', 'exclusive-addons-elementor' ),
+				'label'        => __( 'Show Arrow', GOEE_TEXTDOMAIN ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'ON', 'exclusive-addons-elementor' ),
-				'label_off'    => __( 'OFF', 'exclusive-addons-elementor' ),
+				'label_on'     => __( 'ON', GOEE_TEXTDOMAIN ),
+				'label_off'    => __( 'OFF', GOEE_TEXTDOMAIN ),
 				'return_value' => 'yes',
 				'default'      => 'no',
 				'separator'    => 'before'
@@ -682,7 +682,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->start_controls_section(
 			'goee_testimonial_rating_style',
 			[
-				'label'     => esc_html__( 'Rating', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Rating', GOEE_TEXTDOMAIN ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'goee_testimonial_enable_rating' => 'yes'
@@ -693,7 +693,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_rating_size',
 			[
-				'label'       => __( 'Icon Size', 'exclusive-addons-elementor' ),
+				'label'       => __( 'Icon Size', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'size_units'  => [ 'px', '%' ],
 				'range'       => [
@@ -715,7 +715,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_rating_icon_margin',
 			[
-				'label'       => __( 'Icon Margin', 'exclusive-addons-elementor' ),
+				'label'       => __( 'Icon Margin', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'size_units'  => [ 'px', '%' ],
 				'range'       => [
@@ -737,7 +737,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_rating_margin',
 			[
-				'label'        => __( 'Margin', 'exclusive-addons-elementor' ),
+				'label'        => __( 'Margin', GOEE_TEXTDOMAIN ),
 				'type'         => Controls_Manager::DIMENSIONS,
 				'size_units'   => [ 'px', '%', 'em' ],
 				'default'      => [
@@ -757,12 +757,12 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->start_controls_tabs( 'goee_testimonial_rating_tabs' );
 
 			// normal state rating
-			$this->start_controls_tab( 'goee_testimonial_rating_normal', [ 'label' => esc_html__( 'Normal', 'exclusive-addons-elementor' ) ] );
+			$this->start_controls_tab( 'goee_testimonial_rating_normal', [ 'label' => esc_html__( 'Normal', GOEE_TEXTDOMAIN ) ] );
 
 				$this->add_control(
 					'goee_testimonial_rating_normal_color',
 					[
-						'label'     => __( 'Color', 'exclusive-addons-elementor' ),
+						'label'     => __( 'Color', GOEE_TEXTDOMAIN ),
 						'type'      => Controls_Manager::COLOR,
 						'default'   => '#222222',
 						'selectors' => [
@@ -774,12 +774,12 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 			$this->end_controls_tab();
 
 			// hover state rating
-			$this->start_controls_tab( 'goee_testimonial_rating_active', [ 'label' => esc_html__( 'Active', 'exclusive-addons-elementor' ) ] );
+			$this->start_controls_tab( 'goee_testimonial_rating_active', [ 'label' => esc_html__( 'Active', GOEE_TEXTDOMAIN ) ] );
 
 				$this->add_control(
 					'goee_testimonial_rating_active_color',
 					[
-						'label'     => __( 'Color', 'exclusive-addons-elementor' ),
+						'label'     => __( 'Color', GOEE_TEXTDOMAIN ),
 						'type'      => Controls_Manager::COLOR,
 						'default'   => '#ff5b84',
 						'selectors' => [
@@ -800,7 +800,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->start_controls_section(
 			'goee_testimonial_reviewer_style',
 			[
-				'label' => esc_html__( 'Reviewer', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Reviewer', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -808,7 +808,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_reviewer_padding',
 			[
-				'label'      => __( 'Padding', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -826,7 +826,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_reviewer_spacing',
 			[
-				'label'       => __( 'Spacing', 'exclusive-addons-elementor' ),
+				'label'       => __( 'Spacing', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'size_units'  => [ 'px' ],
 				'range'       => [
@@ -855,7 +855,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_title_style',
 			[
-				'label'     => __( 'Reviewer Title', 'exclusive-addons-elementor' ),
+				'label'     => __( 'Reviewer Title', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -883,12 +883,12 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->start_controls_tabs( 'goee_testimonial_title_tabs' );
 
 			// normal state rating
-			$this->start_controls_tab( 'goee_testimonial_title_normal', [ 'label' => esc_html__( 'Normal', 'exclusive-addons-elementor' ) ] );
+			$this->start_controls_tab( 'goee_testimonial_title_normal', [ 'label' => esc_html__( 'Normal', GOEE_TEXTDOMAIN ) ] );
 
 				$this->add_control(
 					'goee_testimonial_title_color',
 					[
-						'label'     => __( 'Color', 'exclusive-addons-elementor' ),
+						'label'     => __( 'Color', GOEE_TEXTDOMAIN ),
 						'type'      => Controls_Manager::COLOR,
 						'default'   => '#000000',
 						'selectors' => [
@@ -900,12 +900,12 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 			$this->end_controls_tab();
 
 			// hover state rating
-			$this->start_controls_tab( 'goee_testimonial_title_hover', [ 'label' => esc_html__( 'Hover', 'exclusive-addons-elementor' ) ] );
+			$this->start_controls_tab( 'goee_testimonial_title_hover', [ 'label' => esc_html__( 'Hover', GOEE_TEXTDOMAIN ) ] );
 
 				$this->add_control(
 					'goee_testimonial_title_color_hover',
 					[
-						'label'     => __( 'Color', 'exclusive-addons-elementor' ),
+						'label'     => __( 'Color', GOEE_TEXTDOMAIN ),
 						'type'      => Controls_Manager::COLOR,
 						'selectors' => [
 							'{{WRAPPER}} .exad-testimonial-name:hover' => 'color: {{VALUE}};'
@@ -920,7 +920,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_title_margin',
 			[
-				'label'      => __( 'Margin', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Margin', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -939,7 +939,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_designation_style',
 			[
-				'label'     => __( 'Reviewer Designation', 'exclusive-addons-elementor' ),
+				'label'     => __( 'Reviewer Designation', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -967,7 +967,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_control(
 			'goee_testimonial_designation_color',
 			[
-				'label'     => __( 'Color', 'exclusive-addons-elementor' ),
+				'label'     => __( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#333333',
 				'selectors' => [
@@ -979,7 +979,7 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_testimonial_designation_margin',
 			[
-				'label'      => __( 'Margin', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Margin', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -1124,143 +1124,5 @@ class GOEE_Testimonial_Addon extends Widget_Base {
 		</div>
 	<?php	
 	}
-	
-	/**
-     * Render testimonial widget output in the editor.
-     *
-     * Written as a Backbone JavaScript template and used to generate the live preview.
-     *
-     * @since 1.0.0
-     * @access protected
-     */
-	protected function content_template() {
-		?>
-		<#
-			view.addRenderAttribute( 'goee_testimonial_content_wrapper', 'class', 'exad-testimonial-content-wrapper' );
-			if ( 'yes' === settings.goee_testimonial_description_arrow_enable ) {
-	        	view.addRenderAttribute( 'goee_testimonial_content_wrapper', 'class', 'exad-testimonial-content-wrapper-arrow' );
-	      	}
 
-	      	view.addInlineEditingAttributes( 'goee_testimonial_name', 'basic' );
-	      	view.addRenderAttribute( 'goee_testimonial_name', 'class', 'exad-testimonial-name' );
-
-	      	view.addInlineEditingAttributes( 'goee_testimonial_designation', 'basic' );
-			view.addRenderAttribute( 'goee_testimonial_designation', 'class', 'exad-testimonial-designation' );
-
-	      	view.addInlineEditingAttributes( 'goee_testimonial_description', 'basic' );
-	      	view.addRenderAttribute( 'goee_testimonial_description', 'class', 'exad-testimonial-description' );
-
-			var target = settings.goee_testimonial_url.is_external ? ' target="_blank"' : '';
-			var nofollow = settings.goee_testimonial_url.nofollow ? ' rel="nofollow"' : '';
-
-	      	if ( settings.goee_testimonial_image.url || settings.goee_testimonial_image.id ) {
-				var image = {
-					id: settings.goee_testimonial_image.id,
-					url: settings.goee_testimonial_image.url,
-					size: settings.testimonial_thumbnail_size,
-					dimension: settings.testimonial_thumbnail_custom_dimension,
-					model: view.getEditModel()
-				};
-
-				var imageURL = elementor.imagesManager.getImageUrl( image );
-			}
-
-			if ( 'yes' === settings.goee_testimonial_container_transition_top ){
-				var transition_top = 'exad-testimonial-transition-top-' + settings.goee_testimonial_container_transition_top ;
-			}
-
-			var TestimonialNameHTMLTag = elementor.helpers.validateHTMLTag( settings.goee_testimonial_name_tag );
-		#>
-
-		<div class="exad-testimonial-wrapper {{ settings.goee_testimonial_container_alignment }} {{ transition_top }}">
-	        <div class="exad-testimonial-wrapper-inner {{ settings.goee_testimonial_layout }}">
-				<# if( 'layout-1' === settings.goee_testimonial_layout ){ #>
-					<div {{{ view.getRenderAttributeString( 'goee_testimonial_content_wrapper' ) }}}>
-						<# if ( settings.goee_testimonial_description ) { #>
-							<p {{{ view.getRenderAttributeString( 'goee_testimonial_description' ) }}}>
-								{{{ settings.goee_testimonial_description }}}
-							</p>
-							<# if ( 'yes' === settings.goee_testimonial_enable_rating ) { #>
-								
-								<ul class="exad-testimonial-ratings">
-									<#
-										var $ratings = settings.goee_testimonial_rating_number;
-										var $rating_active_class = '';
-										for( var $i = 1; $i <= 5; $i++ ) {
-											if( $ratings >= $i ) { #>
-											<li class="exad-testimonial-ratings-active"><i class="{{ settings.goee_testimonial_rating_icon.value }}"></i></li>
-											<# } else { #>
-											<li><i class="{{ settings.goee_testimonial_rating_icon.value }}"></i></li>
-											<# }
-										} 
-									#>
-								</ul>
-
-							<# } #>
-						<# } #>
-					</div>
-				<# } #>
-
-	            <div class="exad-testimonial-reviewer-wrapper">
-					<# if( 'exad-testimonial-align-bottom' !== settings.goee_testimonial_container_alignment ) { #>	
-						<# if ( imageURL ) { #>
-					    	<div class="exad-testimonial-thumb">
-								<img src="{{{ imageURL }}}">
-							</div>
-						<# } #>
-					<# } #>
-
-					<div class="exad-testimonial-reviewer">
-						<# if ( settings.goee_testimonial_name ) { #>
-							<a href="{{ settings.goee_testimonial_url.url }}"{{ target }}{{ nofollow }}>
-								<{{{ TestimonialNameHTMLTag }}} {{{ view.getRenderAttributeString( 'goee_testimonial_name' ) }}}>
-									{{{ settings.goee_testimonial_name }}}
-								</{{{ TestimonialNameHTMLTag }}}>
-							</a>
-						<# } #>
-						<# if ( settings.goee_testimonial_designation ) { #>
-							<span  {{{ view.getRenderAttributeString( 'goee_testimonial_designation' ) }}}>
-								{{{ settings.goee_testimonial_designation }}}
-							</span>
-						<# } #>
-					</div>
-
-					<# if( 'exad-testimonial-align-bottom' === settings.goee_testimonial_container_alignment ) { #>
-						<# if ( imageURL ) { #>
-					    	<div class="exad-testimonial-thumb">
-								<img src="{{{ imageURL }}}">
-							</div>
-						<# } #>
-					<# } #>					
-	        	</div>
-				<# if( 'layout-2' === settings.goee_testimonial_layout ){ #>
-					<div {{{ view.getRenderAttributeString( 'goee_testimonial_content_wrapper' ) }}}>
-						<# if ( settings.goee_testimonial_description ) { #>
-							<p {{{ view.getRenderAttributeString( 'goee_testimonial_description' ) }}}>
-								{{{ settings.goee_testimonial_description }}}
-							</p>
-							<# if ( 'yes' === settings.goee_testimonial_enable_rating ) { #>
-								
-								<ul class="exad-testimonial-ratings">
-									<#
-										var $ratings = settings.goee_testimonial_rating_number;
-										var $rating_active_class = '';
-										for( var $i = 1; $i <= 5; $i++ ) {
-											if( $ratings >= $i ) { #>
-											<li class="exad-testimonial-ratings-active"><i class="{{ settings.goee_testimonial_rating_icon.value }}"></i></li>
-											<# } else { #>
-											<li><i class="{{ settings.goee_testimonial_rating_icon.value }}"></i></li>
-											<# }
-										}
-									#>
-								</ul>
-
-							<# } #>
-						<# } #>
-					</div>
-				<# } #>
-	        </div>
-	    </div>
-		<?php
-	}
 }

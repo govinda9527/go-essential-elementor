@@ -15,7 +15,7 @@ class GOEE_Business_Hours extends \Elementor\Widget_Base
     }
     public function get_icon()
     {
-        return 'eicon-clock eicon-clock-o';
+        return 'goee goee-logo eicon-clock eicon-clock-o';
     }
     public function get_categories()
     {
@@ -23,7 +23,7 @@ class GOEE_Business_Hours extends \Elementor\Widget_Base
     }
     public function get_keywords()
     {
-        return ['card', 'service', 'highlight', 'essential'];
+        return ['card', 'service', 'highlight'];
     }
     protected function register_controls()
     {

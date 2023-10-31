@@ -26,7 +26,7 @@ class GOEE_Iconbox extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-icon-box';
+		return 'goee goee-logo eicon-icon-box';
 	}
 
 	public function get_categories() {
@@ -34,7 +34,7 @@ class GOEE_Iconbox extends Widget_Base {
 	}
 
 	public function get_keywords() {
-		return [ 'exclusive', 'information', 'infobox', 'service' ];
+		return [ 'information', 'infobox', 'service' ];
 	}
 
 	protected function register_controls() {

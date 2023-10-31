@@ -15,7 +15,7 @@ class GOEE_Heading extends Widget_Base {
 	
 	//use ElementsCommonFunctions;
 	public function get_name() {
-		return 'goee-exclusive-heading';
+		return 'goee-heading';
 	}
 
 	public function get_title() {
@@ -29,7 +29,7 @@ class GOEE_Heading extends Widget_Base {
 	}
 
 	public function get_keywords() {
-        return [ 'exclusive', 'title' ];
+        return [ 'heading', 'title' ];
     }
     
 	protected function register_controls() {
@@ -178,10 +178,10 @@ class GOEE_Heading extends Widget_Base {
 					'goee-heading-right' => 'text-align: right; margin-left: auto; margin-right: unset',
 				],
 				'selectors' => [
-					'{{WRAPPER}} .goee-exclusive-heading' => '{{VALUE}};',
-					'{{WRAPPER}} .goee-exclusive-heading .goee-heading-separator' => '{{VALUE}};',
-					'{{WRAPPER}} .goee-exclusive-heading .goee-heading-icon' => '{{VALUE}};',
-					'{{WRAPPER}} .goee-exclusive-heading .goee-heading-icon-box-yes .goee-heading-icon' => '{{VALUE}};',
+					'{{WRAPPER}} .goee-heading' => '{{VALUE}};',
+					'{{WRAPPER}} .goee-heading .goee-heading-separator' => '{{VALUE}};',
+					'{{WRAPPER}} .goee-heading .goee-heading-icon' => '{{VALUE}};',
+					'{{WRAPPER}} .goee-heading .goee-heading-icon-box-yes .goee-heading-icon' => '{{VALUE}};',
 				],
 				'default'     => 'goee-heading-center'
 			]
@@ -423,7 +423,7 @@ class GOEE_Heading extends Widget_Base {
 					'size'   => 1
 				],
 				'selectors'  => [
-					'{{WRAPPER}} .goee-exclusive-heading-title' => '-webkit-text-stroke-width: {{SIZE}}{{UNIT}};'
+					'{{WRAPPER}} .goee-heading-title' => '-webkit-text-stroke-width: {{SIZE}}{{UNIT}};'
 				],
 				'condition' => [
 					'goee_heading_outline_enable' => 'yes',
@@ -438,7 +438,7 @@ class GOEE_Heading extends Widget_Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#222222',
 				'selectors' => [
-					'{{WRAPPER}} .goee-exclusive-heading-title' => '-webkit-text-stroke-color: {{VALUE}};'
+					'{{WRAPPER}} .goee-heading-title' => '-webkit-text-stroke-color: {{VALUE}};'
 				],
 				'condition' => [
 					'goee_heading_outline_enable' => 'yes',
@@ -451,7 +451,7 @@ class GOEE_Heading extends Widget_Base {
 			[
 				'name'      => 'goee_heading_background',
 				'types'     => [ 'classic', 'gradient' ],
-				'selector'  => '{{WRAPPER}} .goee-heading-image-gradient .goee-exclusive-heading-title',
+				'selector'  => '{{WRAPPER}} .goee-heading-image-gradient .goee-heading-title',
 				'condition' => [
 					'goee_heading_type' => 'goee-heading-image-gradient'
 				]
@@ -462,7 +462,7 @@ class GOEE_Heading extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'goee_heading_typography',
-				'selector' => '{{WRAPPER}} .goee-exclusive-heading-title'
+				'selector' => '{{WRAPPER}} .goee-heading-title'
 			]
 		);
 
@@ -473,7 +473,7 @@ class GOEE_Heading extends Widget_Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#222222',
 				'selectors' => [
-					'{{WRAPPER}} .goee-exclusive-heading-title, {{WRAPPER}} a .goee-exclusive-heading-title' => 'color: {{VALUE}};'
+					'{{WRAPPER}} .goee-heading-title, {{WRAPPER}} a .goee-heading-title' => 'color: {{VALUE}};'
 				],
 				'condition' => [
 					'goee_heading_type' => ['goee-heading-simple', 'goee-heading-text-background']
@@ -486,7 +486,7 @@ class GOEE_Heading extends Widget_Base {
 			[
 				'name' => 'goee_heading_text_shadow',
 				'label' => __( 'Text Shadow', GOEE_TEXTDOMAIN ),
-				'selector' => '{{WRAPPER}} .goee-exclusive-heading-title',
+				'selector' => '{{WRAPPER}} .goee-heading-title',
 			]
 		);
 
@@ -497,7 +497,7 @@ class GOEE_Heading extends Widget_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors'  => [
-					'{{WRAPPER}} .goee-exclusive-heading-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+					'{{WRAPPER}} .goee-heading-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
 				]
 			]
 		);
@@ -523,7 +523,7 @@ class GOEE_Heading extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'goee_heading_text_background_typography',
-				'selector' => '{{WRAPPER}} .goee-heading-text-background .goee-exclusive-heading-title::after'
+				'selector' => '{{WRAPPER}} .goee-heading-text-background .goee-heading-title::after'
 			]
 		);
 
@@ -534,7 +534,7 @@ class GOEE_Heading extends Widget_Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#eaeff3',
 				'selectors' => [
-					'{{WRAPPER}} .goee-heading-text-background .goee-exclusive-heading-title::after' => 'color: {{VALUE}};'
+					'{{WRAPPER}} .goee-heading-text-background .goee-heading-title::after' => 'color: {{VALUE}};'
 				]
 			]
 		);
@@ -568,7 +568,7 @@ class GOEE_Heading extends Widget_Base {
 					'size'   => 1
 				],
 				'selectors'  => [
-					'{{WRAPPER}} .goee-heading-text-background .goee-exclusive-heading-title::after' => '-webkit-text-stroke-width: {{SIZE}}{{UNIT}};'
+					'{{WRAPPER}} .goee-heading-text-background .goee-heading-title::after' => '-webkit-text-stroke-width: {{SIZE}}{{UNIT}};'
 				],
 				'condition' => [
 					'goee_heading_text_background_outline_enable' => 'yes',
@@ -583,7 +583,7 @@ class GOEE_Heading extends Widget_Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#222222',
 				'selectors' => [
-					'{{WRAPPER}} .goee-heading-text-background .goee-exclusive-heading-title::after' => '-webkit-text-stroke-color: {{VALUE}};'
+					'{{WRAPPER}} .goee-heading-text-background .goee-heading-title::after' => '-webkit-text-stroke-color: {{VALUE}};'
 				],
 				'condition' => [
 					'goee_heading_text_background_outline_enable' => 'yes',
@@ -709,7 +709,7 @@ class GOEE_Heading extends Widget_Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#8a8d91',
 				'selectors' => [
-					'{{WRAPPER}} .goee-exclusive-heading-description' => 'color: {{VALUE}};'
+					'{{WRAPPER}} .goee-heading-description' => 'color: {{VALUE}};'
 				]
 			]
 		);
@@ -718,7 +718,7 @@ class GOEE_Heading extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 					'name'     => 'goee_heading_subheading_typography',
-					'selector' => '{{WRAPPER}} .goee-exclusive-heading-description'
+					'selector' => '{{WRAPPER}} .goee-heading-description'
 			]
 		);
 
@@ -729,7 +729,7 @@ class GOEE_Heading extends Widget_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors'  => [
-					'{{WRAPPER}} .goee-exclusive-heading-description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+					'{{WRAPPER}} .goee-heading-description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
 				]
 			]
 		);
@@ -745,7 +745,7 @@ class GOEE_Heading extends Widget_Base {
 			'goee_exclusive_heading_wrapper', 
 			[ 
 				'class' => [ 
-					'goee-exclusive-heading-wrapper', 
+					'goee-heading-wrapper', 
 					esc_attr( $settings['goee_heading_title_alignment'] ), 
 					esc_attr( $settings['goee_heading_type'] ) 
 				]
@@ -756,7 +756,7 @@ class GOEE_Heading extends Widget_Base {
 			'goee_heading_title', 
 			[ 
 				'data-content' => esc_attr( $settings['goee_heading_title'] ),
-				'class'        => 'goee-exclusive-heading-title'
+				'class'        => 'goee-heading-title'
 			]
 		);
 
@@ -776,11 +776,11 @@ class GOEE_Heading extends Widget_Base {
 
 		$this->add_inline_editing_attributes( 'goee_heading_title', 'basic' );
 
-		$this->add_render_attribute( 'goee_heading_subheading', 'class', 'goee-exclusive-heading-description' );
+		$this->add_render_attribute( 'goee_heading_subheading', 'class', 'goee-heading-description' );
 		$this->add_inline_editing_attributes( 'goee_heading_subheading', 'basic' );
 		?>
 
-        <div class="goee-exclusive-heading">
+        <div class="goee-heading">
             <div <?php echo $this->get_render_attribute_string( 'goee_exclusive_heading_wrapper' ); ?>>
 			<?php
 				if ( 'yes' === $settings['goee_heading_icon_show'] && !empty( $settings['goee_heading_icon']['value'] ) ) : ?>

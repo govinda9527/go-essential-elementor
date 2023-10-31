@@ -26,7 +26,7 @@ class GOEE_Tooltips extends Widget_Base {
     }
 
     public function get_keywords() {
-        return [ 'exclusive', 'hover', 'title' ];
+        return [ 'hover', 'title' ];
     }
 
     public function get_categories() {

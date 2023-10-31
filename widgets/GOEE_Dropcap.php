@@ -16,7 +16,7 @@ class GOEE_Dropcap extends Widget_Base {
     }
 
     public function get_icon() {
-        return 'eicon-editor-paragraph';
+        return 'goee goee-logo eicon-editor-paragraph';
     }
 
     public function get_keywords() {

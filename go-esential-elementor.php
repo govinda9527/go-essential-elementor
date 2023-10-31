@@ -147,6 +147,16 @@ function goee_frontend_scripts() {
 }
 add_action( 'elementor/frontend/after_register_scripts', 'goee_frontend_scripts' );
 
+function goee_frontend_editor_scripts() {
+
+	wp_register_style( 'goee-frontend-editor', GOEE_ASSETS_URL . 'css/goee-frontend-editor.css' );
+	wp_enqueue_style( 'goee-frontend-editor' );
+
+}
+add_action( 'elementor/editor/after_enqueue_scripts', 'goee_frontend_editor_scripts' );
+// add_action( 'elementor/editor/after_enqueue_scripts', [ __CLASS__, 'editor_scripts' ] );
+
+
 
 /**
  * Admin notice

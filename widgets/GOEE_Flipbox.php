@@ -23,7 +23,7 @@ class GOEE_Flipbox extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-flip-box';
+		return 'goee goee-logo eicon-flip-box';
 	}
 
    	public function get_categories() {

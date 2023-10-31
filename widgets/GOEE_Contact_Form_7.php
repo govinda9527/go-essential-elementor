@@ -51,7 +51,7 @@ class GOEE_Contact_Form_7 extends Widget_Base {
     }
 
     public function get_keywords() {
-        return [ 'exclusive', 'cf7' ];
+        return [ 'cf7', 'form', 'contact form' ];
     }
 
     /**
@@ -62,7 +62,7 @@ class GOEE_Contact_Form_7 extends Widget_Base {
 	 * @return string Widget icon.
 	 */
     public function get_icon() {
-        return 'eicon-envelope';
+        return 'goee goee-logo eicon-envelope';
     }
 
     /**

@@ -21,17 +21,17 @@ class GOEE_Button extends Widget_Base
 
     public function get_title()
     {
-        return esc_html('Button', 'go-essential-elementor');
+        return esc_html('Button', GOEE_TEXTDOMAIN);
     }
 
     public function get_icon()
     {
-        return 'eicon-button';
+        return 'goee goee-logo eicon-button';
     }
 
     public function get_keywords()
     {
-        return ['goee', 'goee-button'];
+        return ['goee', 'goee-button', 'button'];
     }
 
     public function get_categories()

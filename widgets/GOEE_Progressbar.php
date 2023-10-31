@@ -19,7 +19,7 @@ class GOEE_Progressbar extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-skill-bar';
+		return 'goee goee-logo eicon-skill-bar';
 	}
 
 	public function get_categories() {
@@ -31,7 +31,7 @@ class GOEE_Progressbar extends Widget_Base {
 	}
 
 	public function get_keywords() {
-		return [ 'exclusive', 'skill', 'circle', 'bars','go' ];
+		return [ 'skill', 'circle', 'bars','go' ];
 	}
 
 	private function hexToRGB($primaryColor){

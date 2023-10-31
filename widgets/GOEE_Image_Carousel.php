@@ -18,11 +18,11 @@ class GOEE_Image_Carousel extends Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Image Carousel', 'exclusive-addons-elementor' );
+		return esc_html__( 'Image Carousel', GOEE_TEXTDOMAIN );
 	}
 
 	public function get_icon() {
-		return 'eicon-carousel';
+		return 'goee goee-logo eicon-carousel';
 	}
 
 	public function get_categories() {
@@ -34,7 +34,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 	}
 
 	public function get_keywords() {
-        return [ 'exclusive', 'image', 'slider', 'thumbnail', 'brand' ];
+        return [ 'image', 'slider', 'thumbnail', 'brand' ];
     }
 	
 	protected function register_controls() {
@@ -46,7 +46,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 	    $this->start_controls_section(
 			'goee_image_carousel_content',
 			[
-				'label' => esc_html__( 'Content', 'exclusive-addons-elementor' )
+				'label' => esc_html__( 'Content', GOEE_TEXTDOMAIN )
 			]
 		);
 
@@ -55,7 +55,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$image_repeater->add_control(
 			'goee_image_carousel_image',
 			[
-				'label'   => __( 'Image', 'exclusive-addons-elementor' ),
+				'label'   => __( 'Image', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src()
@@ -80,13 +80,13 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$image_repeater->add_control(
 			'goee_image_carousel_link_to_type',
 			[
-				'label'   => esc_html__( 'Link to', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Link to', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::SELECT,
 				'separator'  => 'before',
 				'options' => [
-					''       => esc_html__( 'None', 'exclusive-addons-elementor' ),
-					'file'   => esc_html__( 'Media File', 'exclusive-addons-elementor' ),
-					'custom' => esc_html__( 'Custom URL', 'exclusive-addons-elementor' ),
+					''       => esc_html__( 'None', GOEE_TEXTDOMAIN ),
+					'file'   => esc_html__( 'Media File', GOEE_TEXTDOMAIN ),
+					'custom' => esc_html__( 'Custom URL', GOEE_TEXTDOMAIN ),
 				],
 			]
 		);
@@ -108,7 +108,7 @@ class GOEE_Image_Carousel extends Widget_Base {
         $this->add_control(
 			'goee_image_carousel_repeater',
 			[
-				'label'   => esc_html__( 'Image Carousel', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Image Carousel', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::REPEATER,
 				'fields'  => $image_repeater->get_controls(),
 				'default' => [
@@ -125,14 +125,14 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'goee_image_carousel_settings',
 			[
-				'label' => esc_html__( 'Carousel Settings', 'exclusive-addons-elementor' )
+				'label' => esc_html__( 'Carousel Settings', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_responsive_control(
 			'goee_image_slide_to_show',
 			[
-				'label'   => esc_html__( 'Columns', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Columns', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => '3',
 				'tablet_default' => '2',
@@ -143,7 +143,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_control(
 			'goee_image_slide_to_scroll',
 			[
-				'label'   => esc_html__( 'Slide to Scroll', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Slide to Scroll', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => '1'
 			]
@@ -152,15 +152,15 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_control(
 			'goee_image_carousel_nav',
 			[
-				'label'     => esc_html__( 'Navigation', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Navigation', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::SELECT,
 				'default'   => 'arrows',
 				'separator' => 'before',
 				'options' => [
-                    'arrows' => esc_html__( 'Arrows', 'exclusive-addons-elementor' ),
-                    'dots'   => esc_html__( 'Dots', 'exclusive-addons-elementor' ),
-                    'both'   => esc_html__( 'Arrows and Dots', 'exclusive-addons-elementor' ),
-                    'none'   => esc_html__( 'None', 'exclusive-addons-elementor' )
+                    'arrows' => esc_html__( 'Arrows', GOEE_TEXTDOMAIN ),
+                    'dots'   => esc_html__( 'Dots', GOEE_TEXTDOMAIN ),
+                    'both'   => esc_html__( 'Arrows and Dots', GOEE_TEXTDOMAIN ),
+                    'none'   => esc_html__( 'None', GOEE_TEXTDOMAIN )
                     
                 ]
 			]
@@ -169,7 +169,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_control(
 			'goee_image_autoplay',
 			[
-				'label'     => esc_html__( 'Autoplay', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Autoplay', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::SWITCHER,
 				'separator' => 'before',
 				'default'   => 'no'
@@ -179,7 +179,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_control(
 			'goee_image_autoplay_speed',
 			[
-				'label'     => esc_html__( 'Autoplay Speed', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Autoplay Speed', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::NUMBER,
 				'default'   => 5000,
 				'condition' => [
@@ -191,7 +191,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_control(
 			'goee_image_loop',
 			[
-				'label'   => esc_html__( 'Infinite Loop', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Infinite Loop', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes'
 			]
@@ -200,8 +200,8 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_control(
 			'goee_image_smooth_scroll',
 			[
-				'label'   => esc_html__( 'Smooth Scroll', 'exclusive-addons-elementor' ),
-				'description' => __( '<b>Autoplay Speed option not working. This is not necessary for linear slide</b>', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Smooth Scroll', GOEE_TEXTDOMAIN ),
+				'description' => __( '<b>Autoplay Speed option not working. This is not necessary for linear slide</b>', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'no'
 			]
@@ -210,7 +210,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_control(
 			'goee_image_smooth_scroll_speed',
 			[
-				'label'     => esc_html__( 'Speed', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Speed', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::NUMBER,
 				'default'   => 3000,
 				'condition' => [
@@ -228,7 +228,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'goee_image_carousel_style_background',
 			[
-				'label' => esc_html__( 'General Style', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'General Style', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -236,10 +236,10 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_control(
             'goee_image_carousel_max_height_enable',
             [
-                'label'        => __( 'Minimum Height', 'exclusive-addons-elementor' ),
+                'label'        => __( 'Minimum Height', GOEE_TEXTDOMAIN ),
                 'type'         => Controls_Manager::SWITCHER,
-                'label_on'     => __( 'Show', 'exclusive-addons-elementor' ),
-                'label_off'    => __( 'Hide', 'exclusive-addons-elementor' ),
+                'label_on'     => __( 'Show', GOEE_TEXTDOMAIN ),
+                'label_off'    => __( 'Hide', GOEE_TEXTDOMAIN ),
                 'return_value' => 'yes',
                 'default'      => 'no'
             ]
@@ -248,7 +248,7 @@ class GOEE_Image_Carousel extends Widget_Base {
         $this->add_responsive_control(
 			'goee_image_carousel_max_height',
 			[
-				'label' => __( 'Height', 'exclusive-addons-elementor' ),
+				'label' => __( 'Height', GOEE_TEXTDOMAIN ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -273,21 +273,21 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_control(
 			'goee_image_carousel_alignment',
 			[
-				'label'       => esc_html__( 'Alignment', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Alignment', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::CHOOSE,
 				'toggle'      => false,
 				'label_block' => true,
 				'options'     => [
 					'goee-image-carousel-left'   => [
-						'title' => esc_html__( 'Left', 'exclusive-addons-elementor' ),
+						'title' => esc_html__( 'Left', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-left'
 					],
 					'goee-image-carousel-center' => [
-						'title' => esc_html__( 'Center', 'exclusive-addons-elementor' ),
+						'title' => esc_html__( 'Center', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-center'
 					],
 					'goee-image-carousel-right'  => [
-						'title' => esc_html__( 'Right', 'exclusive-addons-elementor' ),
+						'title' => esc_html__( 'Right', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-right'
 					]
 				],
@@ -298,7 +298,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_image_carousel_item_radius',
 			[
-				'label'      => esc_html__( 'Item Radius', 'exclusive-addons-elementor' ),
+				'label'      => esc_html__( 'Item Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -316,7 +316,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_image_carousel_item_margin',
 			[
-				'label'      => esc_html__( 'Item margin', 'exclusive-addons-elementor' ),
+				'label'      => esc_html__( 'Item margin', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default'    => [
@@ -334,7 +334,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_image_carousel_item_padding',
 			[
-				'label'      => esc_html__( 'Item Padding', 'exclusive-addons-elementor' ),
+				'label'      => esc_html__( 'Item Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'selectors'  => [
@@ -345,12 +345,12 @@ class GOEE_Image_Carousel extends Widget_Base {
 
 		$this->start_controls_tabs( 'goee_image_carousel_background_tabs' );
 
-			$this->start_controls_tab( 'goee_image_carousel_background_control', [ 'label' => esc_html__( 'Normal', 'exclusive-addons-elementor' ) ] );
+			$this->start_controls_tab( 'goee_image_carousel_background_control', [ 'label' => esc_html__( 'Normal', GOEE_TEXTDOMAIN ) ] );
 
 				$this->add_control(
 					'goee_image_carousel_background',
 					[
-						'label'     => esc_html__( 'Background', 'exclusive-addons-elementor' ),
+						'label'     => esc_html__( 'Background', GOEE_TEXTDOMAIN ),
 						'type'      => Controls_Manager::COLOR,
 						'selectors' => [
 							'{{WRAPPER}} .goee-image-carousel-element .goee-image-carousel-item' => 'background: {{VALUE}};'
@@ -360,7 +360,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 				$this->add_control(
 					'goee_image_carousel_opacity_normal',
 					[
-						'label'     => __('Opacity', 'exclusive-addons-elementor'),
+						'label'     => __('Opacity', GOEE_TEXTDOMAIN),
 						'type'      => Controls_Manager::NUMBER,
 						'range'     => [
 							'min'   => 0,
@@ -389,12 +389,12 @@ class GOEE_Image_Carousel extends Widget_Base {
 
 			$this->end_controls_tab();
 
-			$this->start_controls_tab( 'goee_image_carousel_background_hover_control', [ 'label' => esc_html__( 'Hover', 'exclusive-addons-elementor' ) ] );
+			$this->start_controls_tab( 'goee_image_carousel_background_hover_control', [ 'label' => esc_html__( 'Hover', GOEE_TEXTDOMAIN ) ] );
 
 				$this->add_control(
 					'goee_image_carousel_background_hover',
 					[
-						'label'     => esc_html__( 'Background Hover', 'exclusive-addons-elementor' ),
+						'label'     => esc_html__( 'Background Hover', GOEE_TEXTDOMAIN ),
 						'type'      => Controls_Manager::COLOR,
 						'selectors' => [
 							'{{WRAPPER}} .goee-image-carousel-element .goee-image-carousel-item:hover' => 'background: {{VALUE}};'
@@ -405,7 +405,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 				$this->add_control(
 					'goee_image_carousel_opacity_hover',
 					[
-						'label'     => __('Opacity', 'exclusive-addons-elementor'),
+						'label'     => __('Opacity', GOEE_TEXTDOMAIN),
 						'type'      => Controls_Manager::NUMBER,
 						'range'     => [
 							'min'   => 0,
@@ -442,7 +442,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->start_controls_section(
             'goee_image_carousel_arrow_controls_style_section',
             [
-                'label'     => __('Arrow Controls', 'exclusive-addons-elementor' ),
+                'label'     => __('Arrow Controls', GOEE_TEXTDOMAIN ),
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'goee_image_carousel_nav' => ['arrows', 'both']
@@ -453,7 +453,7 @@ class GOEE_Image_Carousel extends Widget_Base {
         $this->add_control(
             'goee_image_carousel_arrows_style',
             [
-				'label' => esc_html__( 'Arrows', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Arrows', GOEE_TEXTDOMAIN ),
 				'type'  => Controls_Manager::HEADING
             ]
         );
@@ -461,7 +461,7 @@ class GOEE_Image_Carousel extends Widget_Base {
         $this->add_responsive_control(
             'goee_image_carousel_arrows_size',
             [
-                'label'         => __( 'Size', 'exclusive-addons-elementor' ),
+                'label'         => __( 'Size', GOEE_TEXTDOMAIN ),
                 'type'          => Controls_Manager::SLIDER,
                 'default'       => [
                     'size'      => 20
@@ -482,7 +482,7 @@ class GOEE_Image_Carousel extends Widget_Base {
         $this->add_responsive_control(
             'goee_image_carousel_arrow_width',
             [
-                'label'         => __( 'Width', 'exclusive-addons-elementor' ),
+                'label'         => __( 'Width', GOEE_TEXTDOMAIN ),
                 'type'          => Controls_Manager::SLIDER,
                 'default'       => [
                     'size'      => 60
@@ -503,7 +503,7 @@ class GOEE_Image_Carousel extends Widget_Base {
         $this->add_responsive_control(
             'goee_image_carousel_arrow_height',
             [
-                'label'         => __( 'Height', 'exclusive-addons-elementor' ),
+                'label'         => __( 'Height', GOEE_TEXTDOMAIN ),
                 'type'          => Controls_Manager::SLIDER,
                 'default'       => [
                     'size'      => 60
@@ -524,10 +524,10 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_control(
 			'goee_image_carousel_prev_arrow_position',
 			[
-				'label' => __( 'Previous Arrow Position', 'exclusive-addons-elementor' ),
+				'label' => __( 'Previous Arrow Position', GOEE_TEXTDOMAIN ),
 				'type' => Controls_Manager::POPOVER_TOGGLE,
-				'label_off' => __( 'Default', 'exclusive-addons-elementor' ),
-				'label_on' => __( 'Custom', 'exclusive-addons-elementor' ),
+				'label_off' => __( 'Default', GOEE_TEXTDOMAIN ),
+				'label_on' => __( 'Custom', GOEE_TEXTDOMAIN ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -538,7 +538,7 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->add_responsive_control(
                 'goee_image_carousel_prev_arrow_position_x_offset',
                 [
-                    'label' => __( 'X Offset', 'exclusive-addons-elementor' ),
+                    'label' => __( 'X Offset', GOEE_TEXTDOMAIN ),
                     'type' => Controls_Manager::SLIDER,
                     'size_units' => [ 'px', '%' ],
                     'range' => [
@@ -564,7 +564,7 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->add_responsive_control(
                 'goee_image_carousel_prev_arrow_position_y_offset',
                 [
-                    'label' => __( 'Y Offset', 'exclusive-addons-elementor' ),
+                    'label' => __( 'Y Offset', GOEE_TEXTDOMAIN ),
                     'type' => Controls_Manager::SLIDER,
                     'size_units' => [ 'px', '%' ],
                     'range' => [
@@ -592,10 +592,10 @@ class GOEE_Image_Carousel extends Widget_Base {
         $this->add_control(
 			'goee_image_carousel_next_arrow_position',
 			[
-				'label' => __( 'Next Arrow Position', 'exclusive-addons-elementor' ),
+				'label' => __( 'Next Arrow Position', GOEE_TEXTDOMAIN ),
 				'type' => Controls_Manager::POPOVER_TOGGLE,
-				'label_off' => __( 'Default', 'exclusive-addons-elementor' ),
-				'label_on' => __( 'Custom', 'exclusive-addons-elementor' ),
+				'label_off' => __( 'Default', GOEE_TEXTDOMAIN ),
+				'label_on' => __( 'Custom', GOEE_TEXTDOMAIN ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -606,7 +606,7 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->add_responsive_control(
                 'goee_image_carousel_next_arrow_position_x_offset',
                 [
-                    'label' => __( 'X Offset', 'exclusive-addons-elementor' ),
+                    'label' => __( 'X Offset', GOEE_TEXTDOMAIN ),
                     'type' => Controls_Manager::SLIDER,
                     'size_units' => [ 'px', '%' ],
                     'range' => [
@@ -632,7 +632,7 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->add_responsive_control(
                 'goee_image_carousel_next_arrow_position_y_offset',
                 [
-                    'label' => __( 'Y Offset', 'exclusive-addons-elementor' ),
+                    'label' => __( 'Y Offset', GOEE_TEXTDOMAIN ),
                     'type' => Controls_Manager::SLIDER,
                     'size_units' => [ 'px', '%' ],
                     'range' => [
@@ -660,7 +660,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_image_carousel_arrows_border_radius',
 			[
-				'label'      => esc_html__( 'Border Radius', 'exclusive-addons-elementor' ),
+				'label'      => esc_html__( 'Border Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ '%'],
 				'selectors'  => [
@@ -678,12 +678,12 @@ class GOEE_Image_Carousel extends Widget_Base {
 		$this->start_controls_tabs( 'goee_image_carousel_arrows_style_tabs' );
 
         	// normal state tab
-        	$this->start_controls_tab( 'goee_image_carousel_arrow_normal_style', [ 'label' => esc_html__( 'Normal', 'exclusive-addons-elementor' ) ] );
+        	$this->start_controls_tab( 'goee_image_carousel_arrow_normal_style', [ 'label' => esc_html__( 'Normal', GOEE_TEXTDOMAIN ) ] );
 
 		        $this->add_control(
 		            'goee_image_carousel_arrows_color',
 		            [
-		                'label'         => __( 'Color', 'exclusive-addons-elementor' ),
+		                'label'         => __( 'Color', GOEE_TEXTDOMAIN ),
 		                'type'          => Controls_Manager::COLOR,
 		                'default'       => '#000000',
 		                'selectors'     => [
@@ -695,7 +695,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		        $this->add_control(
 		            'goee_image_carousel_arrows_bg_color',
 		            [
-		                'label'         => __( 'Background Color', 'exclusive-addons-elementor' ),
+		                'label'         => __( 'Background Color', GOEE_TEXTDOMAIN ),
 		                'type'          => Controls_Manager::COLOR,
 		                'default'       => '#dddddd',
 		                'selectors'     => [
@@ -724,12 +724,12 @@ class GOEE_Image_Carousel extends Widget_Base {
 
 
         	// hover state tab
-        	$this->start_controls_tab( 'goee_image_carousel_arrow_hover_style', [ 'label' => esc_html__( 'Hover', 'exclusive-addons-elementor' ) ] );
+        	$this->start_controls_tab( 'goee_image_carousel_arrow_hover_style', [ 'label' => esc_html__( 'Hover', GOEE_TEXTDOMAIN ) ] );
 
 		        $this->add_control(
 		            'goee_image_carousel_arrows_hover_color',
 		            [
-		                'label'         => __( 'Color', 'exclusive-addons-elementor' ),
+		                'label'         => __( 'Color', GOEE_TEXTDOMAIN ),
 		                'type'          => Controls_Manager::COLOR,
 		                'default'       => '#ffffff',
 		                'selectors'     => [
@@ -741,7 +741,7 @@ class GOEE_Image_Carousel extends Widget_Base {
 		        $this->add_control(
 		            'goee_image_carousel_arrows_hover_bg_color',
 		            [
-		                'label'         => __( 'Background Color', 'exclusive-addons-elementor' ),
+		                'label'         => __( 'Background Color', GOEE_TEXTDOMAIN ),
 		                'type'          => Controls_Manager::COLOR,
 		                'default'       => $goee_primary_color,
 		                'selectors'     => [
@@ -775,7 +775,7 @@ class GOEE_Image_Carousel extends Widget_Base {
         $this->start_controls_section(
             'goee_image_carousel_dot_bullet_controls_style_section',
             [
-                'label'     => __('Dots', 'exclusive-addons-elementor' ),
+                'label'     => __('Dots', GOEE_TEXTDOMAIN ),
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'goee_image_carousel_nav' => ['dots', 'both']
@@ -786,7 +786,7 @@ class GOEE_Image_Carousel extends Widget_Base {
         $this->add_responsive_control(
             'goee_image_carousel_dot_bullet_margin',
             [
-                'label'      => __('Margin', 'exclusive-addons-elementor'),
+                'label'      => __('Margin', GOEE_TEXTDOMAIN),
                 'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'default'    => [
@@ -804,12 +804,12 @@ class GOEE_Image_Carousel extends Widget_Base {
         $this->start_controls_tabs( 'goee_image_carousel_dot_bullet_style_tabs' );
 
         // normal state tab
-        $this->start_controls_tab( 'goee_image_carousel_dot_bullet_normal', [ 'label' => esc_html__( 'Normal', 'exclusive-addons-elementor' ) ] );
+        $this->start_controls_tab( 'goee_image_carousel_dot_bullet_normal', [ 'label' => esc_html__( 'Normal', GOEE_TEXTDOMAIN ) ] );
 
             $this->add_responsive_control(
                 'goee_image_carousel_dot_bullet_height',
                 [
-                    'label'  => __( 'Height', 'exclusive-addons-elementor' ),
+                    'label'  => __( 'Height', GOEE_TEXTDOMAIN ),
                     'type'   => Controls_Manager::SLIDER,
                     'range'  => [
                         'px' => [
@@ -830,7 +830,7 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->add_responsive_control(
                 'goee_image_carousel_dot_bullet_width',
                 [
-                    'label'  => __( 'Width', 'exclusive-addons-elementor' ),
+                    'label'  => __( 'Width', GOEE_TEXTDOMAIN ),
                     'type'   => Controls_Manager::SLIDER,
                     'range'  => [
                         'px' => [
@@ -851,7 +851,7 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->add_control(
                 'goee_image_carousel_dot_bullet_color',
                 [
-                    'label'     => esc_html__( 'Color', 'exclusive-addons-elementor' ),
+                    'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
                     'type'      => Controls_Manager::COLOR,
                     'default'   => '#dadada',
                     'selectors' => [
@@ -871,7 +871,7 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->add_responsive_control(
                 'goee_image_carousel_dot_bullet_border_radius',
                 [
-                    'label'      => esc_html__( 'Border Radius', 'exclusive-addons-elementor' ),
+                    'label'      => esc_html__( 'Border Radius', GOEE_TEXTDOMAIN ),
                     'type'       => Controls_Manager::DIMENSIONS,
                     'default'    => [
                         'top'    => 100,
@@ -890,12 +890,12 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->end_controls_tab();
 
             // active state tab
-            $this->start_controls_tab( 'goee_image_carousel_dot_bullet_active', [ 'label' => esc_html__( 'Active', 'exclusive-addons-elementor' ) ] );
+            $this->start_controls_tab( 'goee_image_carousel_dot_bullet_active', [ 'label' => esc_html__( 'Active', GOEE_TEXTDOMAIN ) ] );
 
             $this->add_responsive_control(
                 'goee_image_carousel_dot_bullet_active_height',
                 [
-                    'label'  => __( 'Height', 'exclusive-addons-elementor' ),
+                    'label'  => __( 'Height', GOEE_TEXTDOMAIN ),
                     'type'   => Controls_Manager::SLIDER,
                     'range'  => [
                         'px' => [
@@ -912,7 +912,7 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->add_responsive_control(
                 'goee_image_carousel_dot_bullet_active_width',
                 [
-                    'label'  => __( 'Width', 'exclusive-addons-elementor' ),
+                    'label'  => __( 'Width', GOEE_TEXTDOMAIN ),
                     'type'   => Controls_Manager::SLIDER,
                     'range'  => [
                         'px' => [
@@ -929,7 +929,7 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->add_control(
                 'goee_image_carousel_dot_bullet_active_color',
                 [
-                    'label'     => esc_html__( 'Color', 'exclusive-addons-elementor' ),
+                    'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
                     'type'      => Controls_Manager::COLOR,
                     'default'   => $goee_primary_color,
                     'selectors' => [
@@ -949,7 +949,7 @@ class GOEE_Image_Carousel extends Widget_Base {
             $this->add_responsive_control(
                 'goee_image_carousel_dot_bullet_active_border_radius',
                 [
-                    'label'      => esc_html__( 'Border Radius', 'exclusive-addons-elementor' ),
+                    'label'      => esc_html__( 'Border Radius', GOEE_TEXTDOMAIN ),
                     'type'       => Controls_Manager::DIMENSIONS,         
                     'size_units'    => [ 'px', 'em', '%' ],
                     'selectors'  => [

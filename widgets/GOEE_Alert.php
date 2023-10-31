@@ -12,7 +12,7 @@ use \Elementor\Widget_Base;
 class GOEE_Alert extends Widget_Base {
   
     public function get_name() {
-        return 'goee-exclusive-alert';
+        return 'goee-alert';
     }
 
     public function get_title() {
@@ -20,7 +20,7 @@ class GOEE_Alert extends Widget_Base {
     }
 
     public function get_icon() {
-        return 'eicon-alert';
+        return 'goee goee-logo eicon-alert';
     }
 
     public function get_categories() {

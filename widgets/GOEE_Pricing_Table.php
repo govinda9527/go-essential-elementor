@@ -21,11 +21,11 @@ class GOEE_Pricing_Table extends Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Pricing Table', 'exclusive-addons-elementor' );
+		return esc_html__( 'Pricing Table', GOEE_TEXTDOMAIN );
 	}
 
 	public function get_icon() {
-		return 'eicon-price-table';
+		return 'goee goee-logo eicon-price-table';
 	}
 
 	public function get_categories() {
@@ -33,7 +33,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 	}
 
 	public function get_keywords() {
-        return [ 'exclusive', 'price', 'package', 'product', 'plan', 'go' ];
+        return [ 'price', 'package', 'product', 'plan', 'go' ];
     }
 
 	protected function register_controls() {
@@ -45,7 +45,7 @@ class GOEE_Pricing_Table extends Widget_Base {
   		$this->start_controls_section(
   			'goee_section_pricing_table_feature',
   			[
-  				'label' => esc_html__( 'Features', 'exclusive-addons-elementor' )
+  				'label' => esc_html__( 'Features', GOEE_TEXTDOMAIN )
   			]
 		);
 		  
@@ -55,10 +55,10 @@ class GOEE_Pricing_Table extends Widget_Base {
 			'goee_pricing_table_item',
 			[
 				'name'        => 'goee_pricing_table_item',
-				'label'       => esc_html__( 'List Item', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'List Item', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default'     => esc_html__( 'Pricing table list item', 'exclusive-addons-elementor' ),
+				'default'     => esc_html__( 'Pricing table list item', GOEE_TEXTDOMAIN ),
 				'dynamic' => [
 					'active' => true,
 				]
@@ -69,7 +69,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 			'goee_pricing_table_list_icon',
 			[
 				'name'        => 'goee_pricing_table_list_icon',
-				'label'       => esc_html__( 'List Icon', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'List Icon', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::ICONS,
 				'default'     => [
 					'value'   => 'fas fa-check',
@@ -82,7 +82,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 			'goee_pricing_table_icon_mood',
 			[
 				'name'         => 'goee_pricing_table_icon_mood',
-				'label'        => esc_html__( 'Item Active?', 'exclusive-addons-elementor' ),
+				'label'        => esc_html__( 'Item Active?', GOEE_TEXTDOMAIN ),
 				'type'         => Controls_Manager::SWITCHER,
 				'return_value' => 'yes',
 				'default'      => 'yes'
@@ -96,15 +96,15 @@ class GOEE_Pricing_Table extends Widget_Base {
 				'fields'  => $pricing_repeater->get_controls(),
 				'seperator'   => 'before',
 				'default'     => [
-					[ 'goee_pricing_table_item' => esc_html__( 'Responsive Live', 'exclusive-addons-elementor' ) ],
-					[ 'goee_pricing_table_item' => esc_html__( 'Adaptive Bitrate', 'exclusive-addons-elementor' ) ],
-					[ 'goee_pricing_table_item' => esc_html__( 'Analytics', 'exclusive-addons-elementor' ) ],
+					[ 'goee_pricing_table_item' => esc_html__( 'Responsive Live', GOEE_TEXTDOMAIN ) ],
+					[ 'goee_pricing_table_item' => esc_html__( 'Adaptive Bitrate', GOEE_TEXTDOMAIN ) ],
+					[ 'goee_pricing_table_item' => esc_html__( 'Analytics', GOEE_TEXTDOMAIN ) ],
 					[ 	
-						'goee_pricing_table_item'      => esc_html__( 'Creative Layouts', 'exclusive-addons-elementor' ),
+						'goee_pricing_table_item'      => esc_html__( 'Creative Layouts', GOEE_TEXTDOMAIN ),
 						'goee_pricing_table_icon_mood' => 'no'
 					],
 					[ 
-						'goee_pricing_table_item'      => esc_html__( 'Free Support', 'exclusive-addons-elementor' ),
+						'goee_pricing_table_item'      => esc_html__( 'Free Support', GOEE_TEXTDOMAIN ),
 						'goee_pricing_table_icon_mood' => 'no'
 					]
 				],	
@@ -120,14 +120,14 @@ class GOEE_Pricing_Table extends Widget_Base {
   		$this->start_controls_section(
 			'goee_section_pricing_table_promo_section',
 			[
-				'label' => esc_html__( 'Promo Label', 'exclusive-addons-elementor' )
+				'label' => esc_html__( 'Promo Label', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
 			'goee_pricing_table_promo_enable',
 			[
-				'label'        => esc_html__( 'Promo Label?', 'exclusive-addons-elementor' ),
+				'label'        => esc_html__( 'Promo Label?', GOEE_TEXTDOMAIN ),
 				'type'         => Controls_Manager::SWITCHER,
 				'return_value' => 'yes',
 				'default'      => 'no'
@@ -137,10 +137,10 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_promo_title',
 			[
-				'label'       => esc_html__( 'Title', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Title', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => false,
-				'default'     => esc_html__( 'Recommended', 'exclusive-addons-elementor' ),
+				'default'     => esc_html__( 'Recommended', GOEE_TEXTDOMAIN ),
 				'condition'   => [
 					'goee_pricing_table_promo_enable' => 'yes'
 				],
@@ -153,12 +153,12 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_promo_position',
 			[
-				'label'        => __( 'Position', 'exclusive-addons-elementor' ),
+				'label'        => __( 'Position', GOEE_TEXTDOMAIN ),
 				'type'         => Controls_Manager::SELECT,
 				'default'      => 'promo_top',
 				'options'      => [
-					'promo_top'    => __( 'Top', 'exclusive-addons-elementor' ),
-					'promo_bottom' => __( 'Bottom', 'exclusive-addons-elementor' ),
+					'promo_top'    => __( 'Top', GOEE_TEXTDOMAIN ),
+					'promo_bottom' => __( 'Bottom', GOEE_TEXTDOMAIN ),
 				],
 				'condition'    => [
 					'goee_pricing_table_promo_enable' => 'yes'
@@ -174,17 +174,17 @@ class GOEE_Pricing_Table extends Widget_Base {
   		$this->start_controls_section(
   			'goee_section_pricing_table_settings',
   			[
-  				'label' => esc_html__( 'Header', 'exclusive-addons-elementor' )
+  				'label' => esc_html__( 'Header', GOEE_TEXTDOMAIN )
   			]
   		);
 
   		$this->add_control(
 			'goee_pricing_table_title',
 			[
-				'label'       => esc_html__( 'Title', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Title', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => false,
-				'default'     => esc_html__( 'STANDARD', 'exclusive-addons-elementor' ),
+				'default'     => esc_html__( 'STANDARD', GOEE_TEXTDOMAIN ),
 				'dynamic' => [
 					'active' => true,
 				]
@@ -194,7 +194,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
             'goee_pricing_table_title_tag',
             [
-                'label'   => __('Title HTML Tag', 'exclusive-addons-elementor'),
+                'label'   => __('Title HTML Tag', GOEE_TEXTDOMAIN),
                 'type'    => Controls_Manager::SELECT,
                 'options' => Helper::goee_title_tags(),
                 'default' => 'h3',
@@ -204,7 +204,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_subtitle',
 			[
-				'label'       => esc_html__( 'Subtitle', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Subtitle', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXTAREA,
 				'label_block' => true,
 				'dynamic' => [
@@ -216,7 +216,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_featured',
 			[
-				'label'        => esc_html__( 'Featured?', 'exclusive-addons-elementor' ),
+				'label'        => esc_html__( 'Featured?', GOEE_TEXTDOMAIN ),
 				'type'         => Controls_Manager::SWITCHER,
 				'return_value' => 'yes',
 				'default'      => 'no'
@@ -226,12 +226,12 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_featured_type',
 			[
-				'label'     => esc_html__( 'Badge Type', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Badge Type', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::SELECT,
 				'default'   => 'text-badge',
 				'options'   => [
-					'text-badge' => __( 'Text Badge', 'exclusive-addons-elementor' ),
-					'icon-badge' => __( 'Icon Badge', 'exclusive-addons-elementor' )
+					'text-badge' => __( 'Text Badge', GOEE_TEXTDOMAIN ),
+					'icon-badge' => __( 'Icon Badge', GOEE_TEXTDOMAIN )
 				],
 				'condition' => [
 					'goee_pricing_table_featured' => 'yes'
@@ -242,10 +242,10 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_featured_tag_text',
 			[
-				'label'       => esc_html__( 'Featured Text', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Featured Text', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => false,
-				'default'     => esc_html__( 'FEATURED', 'exclusive-addons-elementor' ),
+				'default'     => esc_html__( 'FEATURED', GOEE_TEXTDOMAIN ),
 				'condition'   => [
 					'goee_pricing_table_featured'      => 'yes',
 					'goee_pricing_table_featured_type' => 'text-badge'
@@ -258,45 +258,45 @@ class GOEE_Pricing_Table extends Widget_Base {
   		$this->start_controls_section(
   			'goee_section_pricing_table_price',
   			[
-  				'label' => esc_html__( 'Price', 'exclusive-addons-elementor' )
+  				'label' => esc_html__( 'Price', GOEE_TEXTDOMAIN )
   			]
 		);
 
 		$this->add_control(
 			'goee_pricing_table_price',
 			[
-				'label'       => esc_html__( 'Price', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Price', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => false,
-				'default'     => esc_html__( '50', 'exclusive-addons-elementor' )
+				'default'     => esc_html__( '50', GOEE_TEXTDOMAIN )
 			]
 		);
 		
   		$this->add_control(
 			'goee_pricing_table_price_cur',
 			[
-				'label'       => esc_html__( 'Price Currency', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Price Currency', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => false,
-				'default'     => esc_html__( '$', 'exclusive-addons-elementor' )
+				'default'     => esc_html__( '$', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
 			'goee_pricing_table_price_cur_position',
 			[
-				'label'       => esc_html__( 'Currency Position', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Currency Position', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::CHOOSE,
 				'toggle'	  => false,
 				'label_block' => false,
 				'default'     => 'goee-pricing-cur-left',
 				'options'     => [
 					'goee-pricing-cur-left' => [
-						'title' => __( 'Left', 'exclusive-addons-elementor' ),
+						'title' => __( 'Left', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-angle-left'
 					],
 					'goee-pricing-cur-right' => [
-						'title' => __( 'Right', 'exclusive-addons-elementor' ),
+						'title' => __( 'Right', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-angle-right'
 					]
 				]
@@ -306,30 +306,30 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_price_by',
 			[
-				'label'       => esc_html__( 'Price By', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Price By', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => false,
-				'default'     => esc_html__( 'mo', 'exclusive-addons-elementor' )
+				'default'     => esc_html__( 'mo', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
 			'goee_pricing_table_period_separator',
 			[
-				'label'       => esc_html__( 'Separated By', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Separated By', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => false,
-				'default'     => esc_html__( '/', 'exclusive-addons-elementor' )
+				'default'     => esc_html__( '/', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
 			'goee_pricing_table_discount_price',
 			[
-				'label' => __( 'Show Discount Price', 'exclusive-addons-elementor' ),
+				'label' => __( 'Show Discount Price', GOEE_TEXTDOMAIN ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'exclusive-addons-elementor' ),
-				'label_off' => __( 'Hide', 'exclusive-addons-elementor' ),
+				'label_on' => __( 'Show', GOEE_TEXTDOMAIN ),
+				'label_off' => __( 'Hide', GOEE_TEXTDOMAIN ),
 				'return_value' => 'yes',
 				'default' => 'no',
 			]
@@ -338,10 +338,10 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_regular_price',
 			[
-				'label'       => esc_html__( 'Ragular Price', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Ragular Price', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => false,
-				'default'     => esc_html__( '50', 'exclusive-addons-elementor' ),
+				'default'     => esc_html__( '50', GOEE_TEXTDOMAIN ),
 				'condition'   => [
 					'goee_pricing_table_discount_price' => 'yes'
 				]
@@ -351,10 +351,10 @@ class GOEE_Pricing_Table extends Widget_Base {
   		$this->add_control(
 			'goee_pricing_table_regular_price_cur',
 			[
-				'label'       => esc_html__( 'Regular Price Currency', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Regular Price Currency', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => false,
-				'default'     => esc_html__( '$', 'exclusive-addons-elementor' ),
+				'default'     => esc_html__( '$', GOEE_TEXTDOMAIN ),
 				'condition'   => [
 					'goee_pricing_table_discount_price' => 'yes'
 				]
@@ -364,7 +364,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_price_subtitle',
 			[
-				'label'       => esc_html__( 'Price Subtitle', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Price Subtitle', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXTAREA,
 				'label_block' => true,
 			]
@@ -380,7 +380,7 @@ class GOEE_Pricing_Table extends Widget_Base {
   		$this->start_controls_section(
   			'goee_section_pricing_table_button',
   			[
-  				'label' => esc_html__( 'Button', 'exclusive-addons-elementor' )
+  				'label' => esc_html__( 'Button', GOEE_TEXTDOMAIN )
   			]
 		);
 		  
@@ -388,12 +388,12 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_btn_position',
 			[
-				'label'   => esc_html__( 'Position', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Position', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'bottom',
 				'options' => [
-					'middle' => __( 'Middle', 'exclusive-addons-elementor' ),
-					'bottom' => __( 'Bottom', 'exclusive-addons-elementor' )
+					'middle' => __( 'Middle', GOEE_TEXTDOMAIN ),
+					'bottom' => __( 'Bottom', GOEE_TEXTDOMAIN )
 				]
 			]
 		);
@@ -401,17 +401,17 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_btn',
 			[
-				'label'       => esc_html__( 'Text', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Text', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default'     => esc_html__( 'Choose Plan', 'exclusive-addons-elementor' )
+				'default'     => esc_html__( 'Choose Plan', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
 			'goee_pricing_table_btn_link',
 			[
-				'label'       => esc_html__( 'Link', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Link', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::URL,
 				'label_block' => true,
 				'default'     => [
@@ -430,14 +430,14 @@ class GOEE_Pricing_Table extends Widget_Base {
   		$this->start_controls_section(
 			'goee_section_pricing_table_note',
 			[
-				'label' => esc_html__( 'Note', 'exclusive-addons-elementor' )
+				'label' => esc_html__( 'Note', GOEE_TEXTDOMAIN )
 			]
 		);
 
 		$this->add_control(
 			'goee_pricing_table_note_text',
 			[
-				'label' => __( 'Text', 'exclusive-addons-elementor' ),
+				'label' => __( 'Text', GOEE_TEXTDOMAIN ),
 				'type' => Controls_Manager::TEXTAREA,
 				'rows' => 5,
 			]
@@ -455,7 +455,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_pricing_tables_styles_presets',
 			[
-				'label' => esc_html__( 'Container', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Container', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -463,7 +463,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_section_pricing_tables_min_height',
 			[
-				'label'       => esc_html__( 'Min Height', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Min Height', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range'      => [
@@ -482,7 +482,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'goee_pricing_table_bg_color_simple',
-				'label' => __( 'Background', 'exclusive-addons-elementor' ),
+				'label' => __( 'Background', GOEE_TEXTDOMAIN ),
 				'types' => [ 'classic', 'gradient' ],
 				'fields_options'  => [
 					'background'  => [
@@ -502,7 +502,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_bg_color',
 			[
-				'label'     => esc_html__( 'Background Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Background Color', GOEE_TEXTDOMAIN ),
 				'seperator' => 'before',
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#ffffff',
@@ -519,7 +519,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_content_padding',
 			[
-				'label'      => __( 'Padding', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -546,7 +546,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_content_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Border Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -591,22 +591,22 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_content_alignment',
 			[
-				'label'         => __( 'Alignment', 'exclusive-addons-elementor' ),
+				'label'         => __( 'Alignment', GOEE_TEXTDOMAIN ),
 				'type'          => Controls_Manager::CHOOSE,
 				'toggle'        => false,
 				'separator'     => 'after',
 				'default'       => $content_align,
 				'options'       => [
 					'left'      => [
-						'title' => __( 'Left', 'exclusive-addons-elementor' ),
+						'title' => __( 'Left', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-left'
 					],
 					'center'    => [
-						'title' => __( 'Center', 'exclusive-addons-elementor' ),
+						'title' => __( 'Center', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-center'
 					],
 					'right'     => [
-						'title' => __( 'Right', 'exclusive-addons-elementor' ),
+						'title' => __( 'Right', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-right'
 					]
 				]
@@ -617,7 +617,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name'     => 'goee_pricing_table_transition_shadow',
-				'label'    => __( 'Hover Box Shadow', 'exclusive-addons-elementor' ),
+				'label'    => __( 'Hover Box Shadow', GOEE_TEXTDOMAIN ),
 				'selector' => '{{WRAPPER}} .goee-pricing-table-wrapper:hover .goee-pricing-table-badge-wrapper',
 				'fields_options'      => [
 		            'box_shadow_type' => [
@@ -639,13 +639,13 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_transition_type',
 			[
-				'label'   => __( 'Hover Style', 'exclusive-addons-elementor' ),
+				'label'   => __( 'Hover Style', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => [
-					'none'              =>  __( 'None', 'exclusive-addons-elementor' ),
-					'transition_top'    =>  __( 'Transition Top', 'exclusive-addons-elementor' ),
-					'transition_bottom' => __( 'Transition Bottom', 'exclusive-addons-elementor' ),
-					'transition_zoom'   => __( 'Transition Zoom', 'exclusive-addons-elementor' )
+					'none'              =>  __( 'None', GOEE_TEXTDOMAIN ),
+					'transition_top'    =>  __( 'Transition Top', GOEE_TEXTDOMAIN ),
+					'transition_bottom' => __( 'Transition Bottom', GOEE_TEXTDOMAIN ),
+					'transition_zoom'   => __( 'Transition Zoom', GOEE_TEXTDOMAIN )
 				],
 				'default' => 'none'
 			]
@@ -662,7 +662,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_pricing_table_promo_style',
 			[
-				'label'     => esc_html__( 'Promo Label', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Promo Label', GOEE_TEXTDOMAIN ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'goee_pricing_table_promo_enable' => 'yes'
@@ -673,20 +673,20 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_promo_alignment',
 			[
-				'label'     => __( 'Alignment', 'exclusive-addons-elementor' ),
+				'label'     => __( 'Alignment', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::CHOOSE,
 				'toggle'    => false,
 				'options'   => [
 					'left'      => [
-						'title' => __( 'Left', 'exclusive-addons-elementor' ),
+						'title' => __( 'Left', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-left'
 					],
 					'center'    => [
-						'title' => __( 'Center', 'exclusive-addons-elementor' ),
+						'title' => __( 'Center', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-center'
 					],
 					'right'     => [
-						'title' => __( 'Right', 'exclusive-addons-elementor' ),
+						'title' => __( 'Right', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-right'
 					]
 				],
@@ -718,7 +718,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'goee_pricing_table_promo_typography',
-				'label'    => __( 'Typography', 'exclusive-addons-elementor' ),
+				'label'    => __( 'Typography', GOEE_TEXTDOMAIN ),
 				'selector' => '{{WRAPPER}} .goee-pricing-table-promo-label',
 			]
 		);
@@ -726,7 +726,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_promo_text-color',
 			[
-				'label'     => esc_html__( 'Text Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Text Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#000',
 				'selectors' => [
@@ -738,7 +738,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_promo_padding',
 			[
-				'label'      => __( 'Padding', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -758,7 +758,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_promo_radius',
 			[
-				'label'      => __( 'Border radius', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Border radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -784,7 +784,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_pricing_table_title_header_settings',
 			[
-				'label' => esc_html__( 'Header', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Header', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -792,12 +792,12 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_header_type',
 			[
-				'label'   => esc_html__( 'Header Type', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Header Type', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'simple',
 				'options' => [
-					'simple'        => __( 'Simple', 'exclusive-addons-elementor' ),
-					'curved-header' => __( 'Curved Header', 'exclusive-addons-elementor' )
+					'simple'        => __( 'Simple', GOEE_TEXTDOMAIN ),
+					'curved-header' => __( 'Curved Header', GOEE_TEXTDOMAIN )
 				]
 			]
 		);
@@ -814,7 +814,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_header_padding',
 			[
-				'label'      => __( 'Padding', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors'  => [
@@ -826,7 +826,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_header_margin',
 			[
-				'label'      => __( 'Margin', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Margin', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -845,7 +845,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_header_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Border Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -893,7 +893,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_pricing_table_title_style_settings',
 			[
-				'label' => esc_html__( 'Header Title', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Header Title', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -901,7 +901,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_section_pricing_table_title_heading',
 			[
-				'label'     => esc_html__( 'Title', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Title', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' =>  'before'
 			]
@@ -910,7 +910,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_title_color',
 			[
-				'label'     => esc_html__( 'Text Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Text Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#8a8d91',
 				'selectors' => [
@@ -942,7 +942,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_title_margin',
 			[
-				'label'      => esc_html__( 'Margin', 'exclusive-addons-elementor' ),
+				'label'      => esc_html__( 'Margin', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'default'    => [
 					'top'      => '0',
@@ -967,7 +967,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_section_pricing_table_subtitletitle_heading',
 			[
-				'label'     => esc_html__( 'Sub Title', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Sub Title', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' =>  'before'
 			]
@@ -976,7 +976,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_subtitle_color',
 			[
-				'label'     => esc_html__( 'Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#000000',
 				'selectors' => [
@@ -997,7 +997,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_subtitle_margin',
 			[
-				'label'   => esc_html__( 'Margin', 'exclusive-addons-elementor' ),
+				'label'   => esc_html__( 'Margin', GOEE_TEXTDOMAIN ),
 				'type'    => Controls_Manager::DIMENSIONS,
 				'default' => [
 					'top'      => '0',
@@ -1023,7 +1023,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_pricing_table_price_style_settings',
 			[
-				'label' => esc_html__( 'Pricing', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Pricing', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -1031,10 +1031,10 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_price_box_separator',
 			[
-				'label'        => esc_html__( 'Enable Separator', 'exclusive-addons-elementor' ),
+				'label'        => esc_html__( 'Enable Separator', GOEE_TEXTDOMAIN ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'ON', 'exclusive-addons-elementor' ),
-				'label_off'    => __( 'OFF', 'exclusive-addons-elementor' ),
+				'label_on'     => __( 'ON', GOEE_TEXTDOMAIN ),
+				'label_off'    => __( 'OFF', GOEE_TEXTDOMAIN ),
 				'return_value' => 'yes',
 				'default'      => 'yes'
 			]
@@ -1043,7 +1043,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_price_box_separator_height',
 			[
-				'label'     => esc_html__( 'Separator Height', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Separator Height', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::NUMBER,
 				'default'   => '1',
 				'selectors' => [
@@ -1059,7 +1059,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_price_box_separator_color',
 			[
-				'label'     => esc_html__( 'Separator Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Separator Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#e5e5e5',
 				'selectors' => [
@@ -1074,7 +1074,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_price_box_separator_spacing',
 			[
-				'label'       => esc_html__( 'Separator Spacing', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Separator Spacing', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'default'     => [
 					'size'    => 30
@@ -1096,10 +1096,10 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_price_box',
 			[
-				'label'        => esc_html__( 'Price Box', 'exclusive-addons-elementor' ),
+				'label'        => esc_html__( 'Price Box', GOEE_TEXTDOMAIN ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'ON', 'exclusive-addons-elementor' ),
-				'label_off'    => __( 'OFF', 'exclusive-addons-elementor' ),
+				'label_on'     => __( 'ON', GOEE_TEXTDOMAIN ),
+				'label_off'    => __( 'OFF', GOEE_TEXTDOMAIN ),
 				'separator'	   => 'before',
 				'return_value' => 'yes',
 				'default'      => 'no'
@@ -1109,7 +1109,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_price_box_height',
 			[
-				'label'     => __( 'Box Height', 'exclusive-addons-elementor' ),
+				'label'     => __( 'Box Height', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::NUMBER,
 				'default'   => '100',
 				'selectors' => [
@@ -1124,7 +1124,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_price_box_width',
 			[
-				'label'     => __( 'Box Width', 'exclusive-addons-elementor' ),
+				'label'     => __( 'Box Width', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::NUMBER,
 				'default'   => '100',
 				'selectors' => [
@@ -1162,7 +1162,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_price_box_radius',
 			[
-				'label'      => __( 'Box Radius', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Box Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -1184,7 +1184,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_price_tag_heading',
 			[
-				'label'     => esc_html__( 'Original Price', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Original Price', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' =>  'before'
 			]
@@ -1193,7 +1193,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_pricing_color',
 			[
-				'label'     => esc_html__( 'Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#132c47',
 				'selectors' => [
@@ -1230,7 +1230,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_regular_price_heading',
 			[
-				'label'     => esc_html__( 'Regular Price', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Regular Price', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' =>  'before',
 				'condition' => [
@@ -1253,7 +1253,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_regular_price_color',
 			[
-				'label'     => esc_html__( 'Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#132c47',
 				'selectors' => [
@@ -1268,7 +1268,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_regular_price_right_spacing',
 			[
-				'label'       => esc_html__( 'Regular Price Right Spacing', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Regular Price Right Spacing', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'default'     => [
 					'size'    => 10
@@ -1290,7 +1290,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_pricing_curency_heading',
 			[
-				'label'     => esc_html__( 'Pricing Curency', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Pricing Curency', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -1299,10 +1299,10 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_pricing_curency_spacing',
 			[
-				'label' => __( 'Spacing', 'exclusive-addons-elementor' ),
+				'label' => __( 'Spacing', GOEE_TEXTDOMAIN ),
 				'type' => Controls_Manager::POPOVER_TOGGLE,
-				'label_off' => __( 'Default', 'exclusive-addons-elementor' ),
-				'label_on' => __( 'Custom', 'exclusive-addons-elementor' ),
+				'label_off' => __( 'Default', GOEE_TEXTDOMAIN ),
+				'label_on' => __( 'Custom', GOEE_TEXTDOMAIN ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -1313,7 +1313,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 			$this->add_responsive_control(
 				'goee_pricing_table_pricing_curency_bottom_spacing',
 				[
-					'label'      => esc_html__( 'Bottom Spacing', 'exclusive-addons-elementor' ),
+					'label'      => esc_html__( 'Bottom Spacing', GOEE_TEXTDOMAIN ),
 					'type'       => Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range'      => [
@@ -1332,7 +1332,7 @@ class GOEE_Pricing_Table extends Widget_Base {
             $this->add_responsive_control(
 				'goee_pricing_table_pricing_curency_right_spacing',
 				[
-					'label'      => esc_html__( 'Right Spacing', 'exclusive-addons-elementor' ),
+					'label'      => esc_html__( 'Right Spacing', GOEE_TEXTDOMAIN ),
 					'type'       => Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range'      => [
@@ -1353,7 +1353,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_pricing_curency_color',
 			[
-				'label'     => esc_html__( 'Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .goee-pricing-table-wrapper .goee-pricing-table-price span.goee-pricing-table-currency' => 'color: {{VALUE}};'
@@ -1372,7 +1372,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_pricing_period_heading',
 			[
-				'label'     => esc_html__( 'Pricing By', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Pricing By', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -1381,7 +1381,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_pricing_period_color',
 			[
-				'label'     => esc_html__( 'Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#132c47',
 				'selectors' => [
@@ -1418,7 +1418,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_price_subtitle_heading',
 			[
-				'label'     => esc_html__( 'Price Subtitle', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Price Subtitle', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -1427,7 +1427,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_price_subtitle_color',
 			[
-				'label'     => esc_html__( 'Text Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Text Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .goee-pricing-table-wrapper .goee-pricing-table-price-subtitle' => 'color: {{VALUE}};'
@@ -1446,7 +1446,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_price_subtitle_margin',
 			[
-				'label'      => __( 'Margin', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Margin', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -1474,7 +1474,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_pricing_table_style_featured_list_settings',
 			[
-				'label' => esc_html__( 'Feature List', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Feature List', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -1490,7 +1490,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_featured_list_icon_size',
 			[
-				'label'       => esc_html__( 'Icon Size', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Icon Size', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'default'     => [
 					'size'    => 12
@@ -1511,7 +1511,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_featured_list_icon_space',
 			[
-				'label'       => esc_html__( 'Icon Space', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Icon Space', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'default'     => [
 					'size'    => 7
@@ -1530,7 +1530,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_list_item_icon_color',
 			[
-				'label'     => esc_html__( 'Icon Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Icon Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => $goee_secondary_color,
 				'selectors' => [
@@ -1542,7 +1542,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_list_item_color',
 			[
-				'label'     => esc_html__( 'Item Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Item Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#132c47',
 				'selectors' => [
@@ -1554,7 +1554,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_list_padding',
 			[
-				'label'      => __( 'Padding', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -1573,10 +1573,10 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_list_border_bottom',
 			[
-				'label'        => __( 'List Border Bottom', 'exclusive-addons-elementor' ),
+				'label'        => __( 'List Border Bottom', GOEE_TEXTDOMAIN ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Show', 'exclusive-addons-elementor' ),
-				'label_off'    => __( 'Hide', 'exclusive-addons-elementor' ),
+				'label_on'     => __( 'Show', GOEE_TEXTDOMAIN ),
+				'label_off'    => __( 'Hide', GOEE_TEXTDOMAIN ),
 				'return_value' => 'yes',
 				'default'      => 'no'
 			]
@@ -1585,7 +1585,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_list_border_bottom_style',
 			[
-				'label'     => __( 'List Border Bottom Color', 'exclusive-addons-elementor' ),
+				'label'     => __( 'List Border Bottom Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'defailt'   => '#e5e5e5',
 				'selectors' => [
@@ -1600,7 +1600,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_list_disable_item_styling',
 			[
-				'label'     => esc_html__( 'Disable Items', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Disable Items', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before'
 			]
@@ -1609,7 +1609,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_list_disable_item_icon_color',
 			[
-				'label'     => esc_html__( 'Icon Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Icon Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#a6a9ad',
 				'selectors' => [
@@ -1621,7 +1621,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_list_disable_item_color',
 			[
-				'label'     => esc_html__( 'Item color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Item color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#a6a9ad',
 				'selectors' => [
@@ -1640,7 +1640,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_pricing_table_featured_tag_settings',
 			[
-				'label'     => esc_html__( 'Featured Badge', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Featured Badge', GOEE_TEXTDOMAIN ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'goee_pricing_table_featured' => 'yes'
@@ -1651,7 +1651,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_featured_tag_font_size',
 			[
-				'label'       => esc_html__( 'Font Size', 'exclusive-addons-elementor' ),
+				'label'       => esc_html__( 'Font Size', GOEE_TEXTDOMAIN ),
 				'type'        => Controls_Manager::SLIDER,
 				'default'     => [
 					'size'    => 12
@@ -1671,7 +1671,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_featured_tag_text_color',
 			[
-				'label'     => esc_html__( 'Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#ffffff',
 				'selectors' => [
@@ -1715,7 +1715,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_pricing_table_btn_style_settings',
 			[
-				'label' => esc_html__( 'Button', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Button', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -1731,7 +1731,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_button_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Border Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -1749,7 +1749,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_button_padding',
 			[
-				'label'      => __( 'Padding', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -1768,7 +1768,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_pricing_table_button_margin',
 			[
-				'label'      => __( 'Margin', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Margin', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -1787,12 +1787,12 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->start_controls_tabs( 'goee_pricing_table_button_tabs' );
 
 			// Normal State Tab
-			$this->start_controls_tab( 'goee_pricing_table_btn_normal', [ 'label' => esc_html__( 'Normal', 'exclusive-addons-elementor' ) ] );
+			$this->start_controls_tab( 'goee_pricing_table_btn_normal', [ 'label' => esc_html__( 'Normal', GOEE_TEXTDOMAIN ) ] );
 
 			$this->add_control(
 				'goee_pricing_table_btn_normal_text_color',
 				[
-					'label'     => esc_html__( 'Text Color', 'exclusive-addons-elementor' ),
+					'label'     => esc_html__( 'Text Color', GOEE_TEXTDOMAIN ),
 					'type'      => Controls_Manager::COLOR,
 					'default'   => '#ffffff',
 					'selectors' => [
@@ -1804,7 +1804,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 			$this->add_control(
 				'goee_pricing_table_btn_normal_bg_color',
 				[
-					'label'     => esc_html__( 'Background Color', 'exclusive-addons-elementor' ),
+					'label'     => esc_html__( 'Background Color', GOEE_TEXTDOMAIN ),
 					'type'      => Controls_Manager::COLOR,
 					'default'   => $goee_secondary_color,
 					'selectors' => [
@@ -1848,12 +1848,12 @@ class GOEE_Pricing_Table extends Widget_Base {
 			$this->end_controls_tab();
 
 			// Hover State Tab
-			$this->start_controls_tab( 'goee_pricing_table_btn_hover', [ 'label' => esc_html__( 'Hover', 'exclusive-addons-elementor' ) ] );
+			$this->start_controls_tab( 'goee_pricing_table_btn_hover', [ 'label' => esc_html__( 'Hover', GOEE_TEXTDOMAIN ) ] );
 
 			$this->add_control(
 				'goee_pricing_table_btn_hover_text_color',
 				[
-					'label'     => esc_html__( 'Text Color', 'exclusive-addons-elementor' ),
+					'label'     => esc_html__( 'Text Color', GOEE_TEXTDOMAIN ),
 					'type'      => Controls_Manager::COLOR,
 					'default'   => $goee_secondary_color,
 					'selectors' => [
@@ -1865,7 +1865,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 			$this->add_control(
 				'goee_pricing_table_btn_hover_bg_color',
 				[
-					'label'     => esc_html__( 'Background Color', 'exclusive-addons-elementor' ),
+					'label'     => esc_html__( 'Background Color', GOEE_TEXTDOMAIN ),
 					'type'      => Controls_Manager::COLOR,
 					'default'   => '#ffffff',
 					'selectors' => [
@@ -1920,7 +1920,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->start_controls_section(
 			'goee_section_pricing_table_note_style',
 			[
-				'label' => esc_html__( 'Note', 'exclusive-addons-elementor' ),
+				'label' => esc_html__( 'Note', GOEE_TEXTDOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
@@ -1928,21 +1928,21 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_pricing_table_note_alignment',
 			[
-				'label'         => __( 'Alignment', 'exclusive-addons-elementor' ),
+				'label'         => __( 'Alignment', GOEE_TEXTDOMAIN ),
 				'type'          => Controls_Manager::CHOOSE,
 				'toggle'        => false,
 				'default'		=> 'center',
 				'options'       => [
 					'left'      => [
-						'title' => __( 'Left', 'exclusive-addons-elementor' ),
+						'title' => __( 'Left', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-left'
 					],
 					'center'    => [
-						'title' => __( 'Center', 'exclusive-addons-elementor' ),
+						'title' => __( 'Center', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-center'
 					],
 					'right'     => [
-						'title' => __( 'Right', 'exclusive-addons-elementor' ),
+						'title' => __( 'Right', GOEE_TEXTDOMAIN ),
 						'icon'  => 'eicon-text-align-right'
 					]
 				],
@@ -1955,7 +1955,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_section_pricing_table_note_padding',
 			[
-				'label'      => __( 'Padding', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Padding', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -1974,7 +1974,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_section_pricing_table_note_margin',
 			[
-				'label'      => __( 'Margin', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Margin', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -1994,7 +1994,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'goee_section_pricing_table_note_background',
-				'label' => __( 'Background', 'exclusive-addons-elementor' ),
+				'label' => __( 'Background', GOEE_TEXTDOMAIN ),
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .goee-pricing-table-wrapper .goee-pricing-table-note',
 			]
@@ -2003,7 +2003,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_control(
 			'goee_section_pricing_table_note_text_color',
 			[
-				'label'     => esc_html__( 'Text Color', 'exclusive-addons-elementor' ),
+				'label'     => esc_html__( 'Text Color', GOEE_TEXTDOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#000',
 				'selectors' => [
@@ -2016,7 +2016,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'goee_section_pricing_table_note_text_typography',
-				'label'    => __( 'Typography', 'exclusive-addons-elementor' ),
+				'label'    => __( 'Typography', GOEE_TEXTDOMAIN ),
 				'selector' => '{{WRAPPER}} .goee-pricing-table-wrapper .goee-pricing-table-note',
 			]
 		);
@@ -2032,7 +2032,7 @@ class GOEE_Pricing_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'goee_section_pricing_table_note_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'exclusive-addons-elementor' ),
+				'label'      => __( 'Border Radius', GOEE_TEXTDOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default'    => [
@@ -2252,224 +2252,6 @@ class GOEE_Pricing_Table extends Widget_Base {
 		</div>
 		<?php
 	}
-
-	/**
-     * Render pricing table widget output in the editor.
-     *
-     * Written as a Backbone JavaScript template and used to generate the live preview.
-     *
-     * @since 1.0.0
-     * @access protected
-     */
-    protected function content_template() {
-    	?>
-    	<#
-			view.addRenderAttribute( 'goee_pricing_table_wrapper', {
-				'class': [ 
-					'goee-pricing-table-wrapper', 
-					'goee-pricing-table', 
-					settings.goee_pricing_table_content_alignment, 
-					settings.goee_pricing_table_transition_type
-				]
-			} );
-		
-			view.addRenderAttribute( 'goee_pricing_table_featured_tag_text', 'class', 'goee-pricing-featured-tag-text' );
-			view.addInlineEditingAttributes( 'goee_pricing_table_featured_tag_text', 'basic' );
-
-			view.addRenderAttribute( 'goee_pricing_table_title', 'class', 'goee-pricing-table-title' );
-			view.addInlineEditingAttributes( 'goee_pricing_table_title', 'basic' );
-
-			view.addRenderAttribute( 'goee_pricing_table_subtitle', 'class', 'goee-pricing-table-subtitle' );
-			view.addInlineEditingAttributes( 'goee_pricing_table_subtitle', 'basic' );
-
-			view.addRenderAttribute( 'goee_pricing_table_box_value', {
-				'class': [ 
-					'goee-pricing-table-price', 
-					'goee-pricing-table-'+settings.goee_pricing_table_discount_price, 
-				]
-			} );
-
-			if( 'yes' === settings.goee_pricing_table_price_box ) {
-				view.addRenderAttribute( 'goee_pricing_table_box_value', 'class', 'price-box' );
-			}
-
-			view.addRenderAttribute( 'goee_pricing_table_price_cur', 'class', 'goee-pricing-table-currency' );
-			view.addInlineEditingAttributes( 'goee_pricing_table_price_cur', 'basic' );
-
-			view.addRenderAttribute( 'goee_pricing_table_period_separator', 'class', 'goee-pricing-table-currency-separator' );
-			view.addInlineEditingAttributes( 'goee_pricing_table_period_separator', 'none' );
-
-			view.addRenderAttribute( 'goee_pricing_table_price_by', 'class', 'goee-pricing-table-price-by' );
-			view.addInlineEditingAttributes( 'goee_pricing_table_price_by', 'basic' );
-
-			view.addRenderAttribute( 'goee_pricing_table_price', 'class', 'goee-pricing-table-price' );
-			view.addInlineEditingAttributes( 'goee_pricing_table_price', 'basic' );
-
-			view.addRenderAttribute( 'goee_pricing_table_features', 'class', 'goee-pricing-table-features' );
-			if( 'yes' === settings.goee_pricing_table_list_border_bottom ){
-				view.addRenderAttribute( 'goee_pricing_table_features', 'class', 'list-border-bottom' );
-			}
-
-			view.addRenderAttribute( 'goee_pricing_table_btn_link', 'class', 'goee-pricing-table-action' );
-	        view.addInlineEditingAttributes( 'goee_pricing_table_btn', 'none' );
-
-	        var target = settings.goee_pricing_table_btn_link.is_external ? ' target="_blank"' : '';
-            var nofollow = settings.goee_pricing_table_btn_link.nofollow ? ' rel="nofollow"' : '';
-
-			var pricingTitleHTMLTag = elementor.helpers.validateHTMLTag( settings.goee_pricing_table_title_tag );
-    	#>
-
-    	<div {{{ view.getRenderAttributeString( 'goee_pricing_table_wrapper' ) }}}>
-			<# if( 'promo_top' === settings.goee_pricing_table_promo_position ) { #>
-				<# if( 'yes' === settings.goee_pricing_table_promo_enable ) { #>
-					<span class="goee-pricing-table-promo-label">{{{ settings.goee_pricing_table_promo_title }}}</span>
-				<# } #>
-			<# } #>
-    		<div class="goee-pricing-table-badge-wrapper">
-				<# if ( 'yes' === settings.goee_pricing_table_featured ) { #>
-					<span class="goee-pricing-table-badge {{{ settings.goee_pricing_table_featured_type }}}">
-						<# if( 'text-badge' === settings.goee_pricing_table_featured_type && settings.goee_pricing_table_featured_tag_text ) { #>
-							<span {{{ view.getRenderAttributeString( 'goee_pricing_table_featured_tag_text' ) }}}>
-								{{{ settings.goee_pricing_table_featured_tag_text }}}
-							</span>
-						<# } #>
-						<# if( 'icon-badge' === settings.goee_pricing_table_featured_type ) { #>
-							<i class="demo-icon eicon-star"></i>
-						<# } #>
-					</span>
-				<# } #>	
-
-				<div class="goee-pricing-table-header">
-					<# if ( settings.goee_pricing_table_title ) { #>
-			    		<{{{ pricingTitleHTMLTag }}} {{{ view.getRenderAttributeString( 'goee_pricing_table_title' ) }}}>
-			    			{{{ settings.goee_pricing_table_title }}}
-			    		</{{{ pricingTitleHTMLTag }}}>
-			    	<# } #>
-
-					<# if ( settings.goee_pricing_table_subtitle ) { #>
-			    		<div {{{ view.getRenderAttributeString( 'goee_pricing_table_subtitle' ) }}}>
-			    			{{{ settings.goee_pricing_table_subtitle }}}
-			    		</div>
-			    	<# } #>
-
-			    	<div {{{ view.getRenderAttributeString( 'goee_pricing_table_box_value' ) }}}>
-						<# if( 'yes' === settings.goee_pricing_table_discount_price ) { #>
-							<p class="goee-pricing-table-regular-price">					
-								<span class="goee-pricing-table-regular-price-cur">{{{ settings.goee_pricing_table_regular_price_cur }}}</span>
-								<span class="goee-pricing-table-regular-price-text">{{{ settings.goee_pricing_table_regular_price }}}</span>
-							</p>
-						<# } #>
-			    		<p class="goee-pricing-table-new-price">	
-			    			<# if ( 'goee-pricing-cur-left' === settings.goee_pricing_table_price_cur_position && settings.goee_pricing_table_price_cur ) { #>
-			    				<span {{{ view.getRenderAttributeString( 'goee_pricing_table_price_cur' ) }}}>
-			    					{{{ settings.goee_pricing_table_price_cur }}}
-			    				</span>
-							<# } #>
-
-							<# if ( settings.goee_pricing_table_price ) { #>
-					    		<span {{{ view.getRenderAttributeString( 'goee_pricing_table_price' ) }}}>
-					    			{{{ settings.goee_pricing_table_price }}}
-					    		</span>
-					    	<# } #>
-
-					    	<# if ( 'goee-pricing-cur-right' === settings.goee_pricing_table_price_cur_position && settings.goee_pricing_table_price_cur ) { #>	
-			    				<span {{{ view.getRenderAttributeString( 'goee_pricing_table_price_cur' ) }}}>
-			    					{{{ settings.goee_pricing_table_price_cur }}}
-			    				</span>
-							<# } #>
-							<# if ( settings.goee_pricing_table_period_separator || settings.goee_pricing_table_price_by ) { #>
-								<span class="goee-price-period">
-									<# if ( settings.goee_pricing_table_period_separator ) { #>
-										<span {{{ view.getRenderAttributeString( 'goee_pricing_table_period_separator' ) }}}>
-											{{{ settings.goee_pricing_table_period_separator }}}
-										</span>
-									<# } #>
-									<# if ( settings.goee_pricing_table_price_by ) { #>
-										<span {{{ view.getRenderAttributeString( 'goee_pricing_table_price_by' ) }}}>
-											{{{ settings.goee_pricing_table_price_by }}}
-										</span>
-									<# } #>
-								</span>
-							<# } #>
-						</p>	
-					</div>
-
-					<# if( settings.goee_pricing_table_price_subtitle ){ #>
-						<span class="goee-pricing-table-price-subtitle">{{{ settings.goee_pricing_table_price_subtitle }}}</span>
-					<# } #>
-
-					<# if ( 'yes' === settings.goee_pricing_table_price_box_separator ) { #>
-						<div class="goee-price-bottom-separator"></div>
-					<# } #>
-					<# if ( 'curved-header' === settings.goee_pricing_table_header_type ) { #>
-						<div class="goee-pricing-table-header-curved">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 20">
-								<path class="st0" d="M0 20h185C70 20 0 0 0 0v20zM185 20h185V0s-70 20-185 20z" />
-							</svg>
-						</div>
-					<# } #>
-				</div>
-
-				<# if ( 'middle' === settings.goee_pricing_table_btn_position && settings.goee_pricing_table_btn ) { #>
-					<a href="{{{ settings.goee_pricing_table_btn_link.url }}}" {{{ view.getRenderAttributeString( 'goee_pricing_table_btn_link' ) }}}{{{ target }}}{{{ nofollow }}}>
-						<span {{{ view.getRenderAttributeString( 'goee_pricing_table_btn' ) }}}>
-							{{{ settings.goee_pricing_table_btn }}}
-						</span>
-					</a>
-				<# } #>
-
-				<# if ( settings.goee_pricing_table_items.length ) { #>
-					<ul {{{ view.getRenderAttributeString( 'goee_pricing_table_features' ) }}}>
-						<# _.each( settings.goee_pricing_table_items, function( item, index ) {
-						    var pricingItem = view.getRepeaterSettingKey( 'goee_pricing_table_item', 'goee_pricing_table_items', index );
-						    view.addRenderAttribute( pricingItem, 'class', 'goee-pricing-item' );
-						    view.addInlineEditingAttributes( pricingItem, 'basic' );
-
-						    var eachPricingItem = 'link_' + index;
-						    var iconMod = 'yes' !== item.goee_pricing_table_icon_mood ? 'goee-pricing-table-features-disable' : 'goee-pricing-table-features-enable';
-						    view.addRenderAttribute( eachPricingItem, {
-								'class': [ 
-									iconMod,
-									'elementor-repeater-item-' + item._id 
-								]
-							} );
-
-							var iconHTML = elementor.helpers.renderIcon( view, item.goee_pricing_table_list_icon, { 'aria-hidden': true }, 'i' , 'object' );
-						#>
-	                   		<li {{{ view.getRenderAttributeString( eachPricingItem ) }}}>
-	                   			<# if ( iconHTML.value ) { #>
-	                                <span class="goee-pricing-li-icon">
-	                                    {{{ iconHTML.value }}}
-	                                </span>
-	                            <# } #>
-	     						<# if ( item.goee_pricing_table_item ) { #>
-	                                <span {{{ view.getRenderAttributeString( pricingItem ) }}}>
-	                                    {{{ item.goee_pricing_table_item }}}
-	                                </span>
-	                            <# } #>
-							</li>
-	                    <# } ); #>
-					</ul>
-				<# } #>
-
-				<# if ( 'bottom' === settings.goee_pricing_table_btn_position && settings.goee_pricing_table_btn ) { #>
-					<a href="{{{ settings.goee_pricing_table_btn_link.url }}}" {{{ view.getRenderAttributeString( 'goee_pricing_table_btn_link' ) }}}{{{ target }}}{{{ nofollow }}}>
-						<span {{{ view.getRenderAttributeString( 'goee_pricing_table_btn' ) }}}>
-							{{{ settings.goee_pricing_table_btn }}}
-						</span>
-					</a>
-				<# } #>
-				<div class="goee-pricing-table-note">{{{ settings.goee_pricing_table_note_text }}}</div>
-    		
-    		</div>
-			<# if( 'promo_bottom' === settings.goee_pricing_table_promo_position ) { #>
-				<# if( 'yes' === settings.goee_pricing_table_promo_enable ) { #>
-					<span class="goee-pricing-table-promo-label">{{{ settings.goee_pricing_table_promo_title }}}</span>
-				<# } #>
-			<# } #>
-    	</div>
-    	<?php
-    }
 
     private function pricing_table_btn() {
 		?>

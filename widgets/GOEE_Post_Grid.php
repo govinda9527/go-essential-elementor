@@ -21,7 +21,7 @@ class GOEE_Post_Grid extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-posts-grid';
+		return 'goee goee-logo eicon-posts-grid';
 	}
 
 	public function get_categories() {

@@ -21,7 +21,7 @@ class GOEE_Logobox extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-image-box';
+		return 'goee goee-logo eicon-image-box';
     }
     
     public function get_keywords() {

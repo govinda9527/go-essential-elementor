@@ -21,7 +21,7 @@ class GOEE_News_Ticker extends Widget_Base {
     }
 
     public function get_icon() {
-        return 'eicon-posts-ticker';
+        return 'goee goee-logo eicon-posts-ticker';
     }
 
     public function get_categories() {
@@ -29,7 +29,7 @@ class GOEE_News_Ticker extends Widget_Base {
     }
 
     public function get_keywords() {
-        return [ 'exclusive', 'bar', 'horizontal' ];
+        return [ 'bar', 'horizontal' ];
     }
     
     public function get_script_depends() {
